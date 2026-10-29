@@ -213,7 +213,7 @@ class WorkflowSourceTests(unittest.TestCase):
         self.assertIn('restaurará la salida anterior',ps)
         self.assertIn('only use official FunnkyHD StudioMDL V2.0 by default',ps)
         self.assertIn('https://www.7-zip.org/a/7zr.exe',ps)
-self.assertIn('Get-Portable7zr',ps)
+        self.assertIn('Get-Portable7zr',ps)
         self.assertIn("$SmdSplitter = Join-Path $Root 'tools\\windows\\split_yorha_smd.py'",ps)
         self.assertIn('custom_player_sven_generated.qc',ps)
         self.assertIn('source-mesh-split.json',ps)
