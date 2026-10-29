@@ -141,7 +141,7 @@ def build_sven_compatible_split(
     output_dir.mkdir(parents=True, exist_ok=True)
     reports = []
     for idx, (part, vertices, normals) in enumerate(parts):
-        base = f"custom_player_highpoly_windows_part_{idx:03d}"
+        base = f"y{idx:03d}"
         dest = output_dir / f"{base}.smd"
         text_lines = prefix[:]
         for tri in part:
@@ -170,6 +170,8 @@ def build_sven_compatible_split(
     body_lines = []
     for item in reports:
         body_path = f"{output_rel}/{Path(item['smd']).name[:-4]}"
+        if len(body_path) > 60:
+            raise ValueError(f"QC $body source path exceeds 60 characters ({len(body_path)}): {body_path}")
         body_lines.append(f'$body "{item["body_name"]}" "{body_path}"')
     generated_qc = body_pattern.sub("\n".join(body_lines), qc_text, count=1)
     if "$splitmesh" not in generated_qc.lower():
