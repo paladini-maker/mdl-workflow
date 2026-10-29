@@ -4,6 +4,7 @@ from __future__ import annotations
 import importlib.util
 import re
 import struct
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -13,6 +14,12 @@ spec = importlib.util.spec_from_file_location('yorha_validator', SCRIPT)
 validator = importlib.util.module_from_spec(spec)
 assert spec and spec.loader
 spec.loader.exec_module(validator)
+SPLITTER_SCRIPT = Path(__file__).with_name('split_yorha_smd.py')
+split_spec = importlib.util.spec_from_file_location('yorha_smd_splitter', SPLITTER_SCRIPT)
+assert split_spec and split_spec.loader
+splitter = importlib.util.module_from_spec(split_spec)
+sys.modules[split_spec.name] = splitter
+split_spec.loader.exec_module(splitter)
 ROOT = SCRIPT.resolve().parents[2]
 
 
@@ -122,6 +129,34 @@ class WorkflowSourceTests(unittest.TestCase):
         self.assertEqual(report['animation_skeleton_mismatches'],0)
         self.assertEqual(report['texture']['width'],1024)
 
+def test_sven_splitter_preserves_all_triangles_and_runtime_limits(self):
+        self.assertTrue(SPLITTER_SCRIPT.is_file())
+        with tempfile.TemporaryDirectory(prefix='.yorha-split-regression-', dir=ROOT) as td:
+            temp=Path(td)
+            outdir=temp/'parts'
+            outqc=temp/'generated.qc'
+            report_path=temp/'split-report.json'
+            report=splitter.build_sven_compatible_split(
+                ROOT/'mesh/custom_player_highpoly_windows.smd',
+                ROOT/'custom_player_windows.qc', outdir, outqc, report_path, root=ROOT,
+                max_vertices=1800, max_normals=1800, max_triangles=3600, max_parts=64,
+            )
+            self.assertEqual(report['status'],'PASS_SVEN_COMPATIBLE_SMD_SPLIT')
+            self.assertEqual(report['triangle_count_source'],99998)
+            self.assertEqual(report['triangle_count_split'],99998)
+            self.assertEqual(report['parts_count'],44)
+            self.assertLessEqual(report['parts_count'],64)
+            self.assertLessEqual(report['max_vertices_actual'],1800)
+            self.assertLessEqual(report['max_normals_actual'],1800)
+            self.assertLessEqual(report['max_triangles_actual'],3600)
+            self.assertEqual(sum(item['triangles'] for item in report['parts']),99998)
+            self.assertTrue(all((outdir/Path(item['smd']).name).is_file() for item in report['parts']))
+            qc=outqc.read_text(encoding='utf-8')
+            self.assertEqual(len(re.findall(r'(?im)^\s*\$body\s+"',qc)),44)
+            self.assertEqual(len(re.findall(r'(?im)^\s*\$sequence\s+"',qc)),208)
+            self.assertIn('$splitmesh 2048',qc)
+            self.assertNotIn('$body "body" "mesh/custom_player_highpoly_windows"',qc)
+
     def test_compiler_capability_probe_really_exceeds_2048_unique_vertices(self):
         probe_dir=SCRIPT.parent/'compiler_probe'
         qc=(probe_dir/'probe.qc').read_text(encoding='utf-8')
@@ -178,7 +213,11 @@ class WorkflowSourceTests(unittest.TestCase):
         self.assertIn('restaurará la salida anterior',ps)
         self.assertIn('only use official FunnkyHD StudioMDL V2.0 by default',ps)
         self.assertIn('https://www.7-zip.org/a/7zr.exe',ps)
-        self.assertIn('Get-Portable7zr',ps)
+self.assertIn('Get-Portable7zr',ps)
+        self.assertIn("$SmdSplitter = Join-Path $Root 'tools\\windows\\split_yorha_smd.py'",ps)
+        self.assertIn('custom_player_sven_generated.qc',ps)
+        self.assertIn('source-mesh-split.json',ps)
+        self.assertIn("'--max-vertices','1800','--max-normals','1800','--max-triangles','3600','--max-parts','64'",ps)
         self.assertIn('Invoke-YorhaBuild.ps1', (ROOT/'compile_yorha_auto.bat').read_text(encoding='utf-8'))
         workflow=(ROOT/'.github/workflows/yorha-windows-auto-build.yml').read_text(encoding='utf-8')
         self.assertIn('runs-on: windows-latest',workflow)

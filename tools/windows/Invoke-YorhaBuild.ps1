@@ -36,6 +36,7 @@ $script:ResolvedGameBananaApiUrl = $null
 $script:DownloadedCompilerInfo = $null
 $Root = (Resolve-Path -LiteralPath $Root).Path
 $Validator = Join-Path $Root 'tools\windows\validate_yorha_auto_workflow.py'
+$SmdSplitter = Join-Path $Root 'tools\windows\split_yorha_smd.py'
 $ProbeSource = Join-Path $Root 'tools\windows\compiler_probe'
 $CompilerCache = Join-Path $Root 'tools\FunnkyHD_StudioMDL_V2.0'
 $CompilerArchive = Join-Path $CompilerCache $ExpectedArchiveName
@@ -354,6 +355,23 @@ function Invoke-CompileAndValidate([string]$ExePath, [string]$CompilerLabel) {
     & $PythonCommand.File @pythonArgs | Out-Host
     if ($LASTEXITCODE -ne 0) { throw "Preflight de assets falló; StudioMDL no se ejecutó. Informe: $sourceReport" }
 
+    # Split the huge source reference SMD before StudioMDL loads it. This is lossless:
+    # every source triangle/corner, bone, normal, UV, and material row is preserved.
+    Write-Step 'Particionando SMD sin pérdida para los límites de Sven Co-op'
+    $splitDir = Join-Path $StagingRoot 'yorha_smd_split'
+    if (Test-Path -LiteralPath $splitDir) { Remove-Item -LiteralPath $splitDir -Recurse -Force }
+    New-Item -ItemType Directory -Path $splitDir -Force | Out-Null
+    $generatedQcPath = Join-Path $StagingRoot 'custom_player_sven_generated.qc'
+    $generatedQcRelative = 'build/windows_auto/staging/custom_player_sven_generated.qc'
+    $splitReport = Join-Path $ReportRoot 'source-mesh-split.json'
+    $splitArgs = @(); $splitArgs += $PythonCommand.Prefix; $splitArgs += @($SmdSplitter,'--root',$Root,'--source-smd','mesh/custom_player_highpoly_windows.smd','--source-qc','custom_player_windows.qc','--output-dir',$splitDir,'--output-qc',$generatedQcPath,'--report',$splitReport,'--max-vertices','1800','--max-normals','1800','--max-triangles','3600','--max-parts','64')
+    & $PythonCommand.File @splitArgs | Out-Host
+    if ($LASTEXITCODE -ne 0) { throw "La partición segura del SMD falló; StudioMDL no se ejecutará. Informe: $splitReport" }
+    $splitJson = Get-Content -LiteralPath $splitReport -Raw | ConvertFrom-Json
+    if ($splitJson.status -ne 'PASS_SVEN_COMPATIBLE_SMD_SPLIT' -or $splitJson.triangle_count_source -ne 99998 -or $splitJson.triangle_count_split -ne 99998 -or $splitJson.parts_count -gt 64 -or $splitJson.max_vertices_actual -gt 1800 -or $splitJson.max_normals_actual -gt 1800 -or $splitJson.max_triangles_actual -gt 3600) {
+        throw "La partición SMD no cumple las comprobaciones de conservación/límites de Sven Co-op. Informe: $splitReport"
+    }
+
     # Preserve the last valid MDL and sidecar groups. The output is restored on any failure.
     $modelDir = Split-Path -Parent $TargetMdl
     $backupDir = Join-Path $StagingRoot ("previous_output_" + [Guid]::NewGuid().ToString('N'))
@@ -370,7 +388,7 @@ function Invoke-CompileAndValidate([string]$ExePath, [string]$CompilerLabel) {
     try {
         Remove-Item -LiteralPath $TargetMdl -Force -ErrorAction SilentlyContinue
         foreach ($file in $previous) { Remove-Item -LiteralPath $file.FullName -Force -ErrorAction SilentlyContinue }
-        $proc = Start-Process -FilePath $ExePath -ArgumentList 'custom_player_windows.qc' -WorkingDirectory $Root -NoNewWindow -Wait -PassThru -RedirectStandardOutput $stdout -RedirectStandardError $stderr
+        $proc = Start-Process -FilePath $ExePath -ArgumentList $generatedQcRelative -WorkingDirectory $Root -NoNewWindow -Wait -PassThru -RedirectStandardOutput $stdout -RedirectStandardError $stderr
         $allLogs = ''
         foreach ($log in @($stdout,$stderr)) { if (Test-Path -LiteralPath $log) { $allLogs += [System.IO.File]::ReadAllText($log) + "`n" } }
         Set-Content -LiteralPath $buildLog -Value $allLogs -Encoding UTF8
@@ -397,6 +415,7 @@ function Invoke-CompileAndValidate([string]$ExePath, [string]$CompilerLabel) {
             compiler_sha256=(Get-FileHash -LiteralPath $ExePath -Algorithm SHA256).Hash.ToLowerInvariant()
             finished_utc=[DateTime]::UtcNow.ToString('o')
             source_report=$sourceReport
+            source_smd_split_report=$splitReport
             mdl_report=$mdlReport
             compiler_log=$buildLog
             main_mdl=$TargetMdl
