@@ -206,9 +206,11 @@ function Expand-7ZipArchive([string]$ArchivePath, [string]$Destination) {
         $extractor = Get-Portable7zr
     }
     # Always test archive integrity before extraction. A successful listing alone is insufficient.
-    & $extractor 't' $ArchivePath '-y'
+    # Send native 7-Zip output to the host, not the function's success pipeline.
+    # Otherwise Download-OfficialFunnkyHDV2 returns log lines alongside studiomdl.exe.
+    & $extractor 't' $ArchivePath '-y' | Out-Host
     if ($LASTEXITCODE -ne 0) { throw "7-Zip no superó la prueba de integridad del archivo: $ArchivePath" }
-    & $extractor 'x' $ArchivePath ("-o" + $Destination) '-y'
+    & $extractor 'x' $ArchivePath ("-o" + $Destination) '-y' | Out-Host
     if ($LASTEXITCODE -ne 0) { throw "7-Zip no pudo extraer el archivo: $ArchivePath" }
 }
 

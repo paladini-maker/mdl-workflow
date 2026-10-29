@@ -185,6 +185,10 @@ class WorkflowSourceTests(unittest.TestCase):
         self.assertIn('validate_yorha_auto_workflow.py',workflow)
         self.assertNotIn('tools/FunnkyHD_StudioMDL_V2.0/**',workflow)
 
+    def test_7zip_native_output_does_not_leak_into_compiler_path(self):
+        ps=(SCRIPT.parent/'Invoke-YorhaBuild.ps1').read_text(encoding='utf-8')
+        self.assertRegex(ps,r"(?m)^\s*& \$extractor 't' \$ArchivePath '-y' \| Out-Host\s*$")
+        self.assertRegex(ps,r"(?m)^\s*& \$extractor 'x' \$ArchivePath \(\"-o\" \+ \$Destination\) '-y' \| Out-Host\s*$")
     def test_portable_extractor_cache_is_hash_verified(self):
         ps=(SCRIPT.parent/'Invoke-YorhaBuild.ps1').read_text(encoding='utf-8')
         self.assertIn("Get-Content -LiteralPath $extractorInfoPath -Raw | ConvertFrom-Json",ps)
