@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "workflow_version": "V41",
+  "generated_at_utc": "2026-10-29T16:56:35.819300+00:00",
+  "status": "SOURCE_PREFLIGHT_PASS__WINDOWS_COMPILE_PENDING",
+  "compiler_target": {
+    "name": "FunnkyHD StudioMDL V2.0",
+    "official_page": "https://gamebanana.com/tools/6552",
+    "archive_expected_at_runtime": "funnkyhd-studiomdl_f6dee.7z",
+    "binary_in_package": false,
+    "reason_binary_not_in_package": "Compiler is fetched from the official publisher at build time and not redistributed.",
+    "capabilities": {
+      "splitmesh": "must pass functional test: auto-splits high-poly $body into visible bodyparts",
+      "max_vertices_per_piece": 2048,
+      "max_normals_per_piece": 2048,
+      "default_max_triangles_per_piece": 4080,
+      "maximum_bodyparts": 64,
+      "sven_max_texture_dimension": 1024,
+      "qualification": "Broadest documented practical choice for this high-poly Sven Co-op model; still subject to engine limits, not unlimited."
+    }
+  },
+  "checks_executed_in_this_environment": {
+    "python_syntax_checks": "PASS",
+    "workflow_regression_tests": "PASS 13/13",
+    "source_qc_mesh_uv_hierarchy_texture_preflight": "PASS_SOURCE_ASSETS",
+    "reference_bones": 90,
+    "reference_triangles": 99998,
+    "qc_sequences": 208,
+    "unique_animation_smd_references": 393,
+    "missing_animation_smd_references": 0,
+    "animation_bone_hierarchy_mismatches": 0,
+    "hitboxes": 35,
+    "controllers": 5,
+    "texture": "1024x1024 uncompressed 8-bit indexed BMP, 256 palette entries",
+    "splitmesh_probe_fixture": "PASS_FIXTURE_CONTENT: 2050 triangles / 6150 corner rows / greater than 2048 unique corner signatures",
+    "mdl_reader_synthetic_fixture": "PASS: multi-bodypart IDST v10 accepted; unsplit over-limit IDST fixture rejected",
+    "powershell_delimiter_static_check": "PASS",
+    "github_actions_yaml_parse": "PASS",
+    "automatic_7zip_extractor_bootstrap": "PASS_STATIC; native download/test pending"
+  },
+  "checks_not_executed_here": {
+    "official_funnkyhd_archive_download": "PENDING_NATIVE_WINDOWS_OR_GITHUB_ACTIONS",
+    "official_compiler_splitmesh_functional_probe": "PENDING_NATIVE_WINDOWS_OR_GITHUB_ACTIONS",
+    "actual_yorha_mdl_compilation": "PENDING_NATIVE_WINDOWS_OR_GITHUB_ACTIONS",
+    "compiled_mdl_binary_readback": "PENDING_ACTUAL_COMPILER_OUTPUT",
+    "hlmv_p2mv_preview": "PENDING",
+    "sven_coop_runtime_test": "PENDING",
+    "official_7zip_extractor_download": "PENDING_NATIVE_WINDOWS_OR_GITHUB_ACTIONS"
+  },
+  "failure_policy": "Never claim successful build unless actual official compiler passes the 2050-triangle capability probe, the 99,998-triangle Yorha QC compiles, binary MDL readback passes, and SHA-256 checks pass; restore previous verified output on failure.",
+  "package_validation": {
+    "status": "PASS_STANDALONE_PACKAGE_PREFLIGHT",
+    "animation_files_included": 393,
+    "animation_references_checked": 393,
+    "source_preflight_report": "validation/source-preflight-v41.json",
+    "regression_tests": "PASS 13/13",
+    "action_yaml": "PASS_PARSE",
+    "actual_native_windows_compilation": "PENDING_WINDOWS_OR_GITHUB_ACTIONS"
+  }
+}

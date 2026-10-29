@@ -1,0 +1,2157 @@
+{
+  "schema_version": 1,
+  "package_version": "V43",
+  "generated_at_utc": "2026-10-29T17:19:26.051726+00:00",
+  "manifest_self_excluded": true,
+  "additional_exclusions": [
+    "SHA256SUMS_V43.txt (avoids cyclic checksum dependency)"
+  ],
+  "file_count_excluding_manifest_and_checksum_list": 429,
+  "files": [
+    {
+      "path": ".github/workflows/yorha-windows-auto-build.yml",
+      "bytes": 2709,
+      "sha256": "f0c4be7f14026cb7035ac5e5ba873c983f7db5de642273790ca01a42aa8b3ef0"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 241,
+      "sha256": "a85442bb487c3027f3539ff807f58089e29da6cf2bb1988c5547400e129a6af2"
+    },
+    {
+      "path": "APLICAR_PATCH_V41_ES.md",
+      "bytes": 949,
+      "sha256": "9f30ea8694481b901aa1d1f44072749feb28ff8de9f9903c9b0d5e804732e6e0"
+    },
+    {
+      "path": "AUTO_BUILD_V41_ES.md",
+      "bytes": 5819,
+      "sha256": "af5a362763bc2ba2c75230ded709f1a06d664107685d925966c72af813cde9a8"
+    },
+    {
+      "path": "BUILD_STATUS_ES.md",
+      "bytes": 5049,
+      "sha256": "722331897699b3f59c695634d0e55a52a898936426291767310895c0b9512fe7"
+    },
+    {
+      "path": "DEPLOY_TO_EXISTING_REPO_V43.md",
+      "bytes": 1263,
+      "sha256": "294ecd070f9c7989d65d764d2f92f38aa98abcbef39936cf39a779e222f51e18"
+    },
+    {
+      "path": "Deploy-Yorha-GitHub.ps1",
+      "bytes": 16962,
+      "sha256": "165f531651f9fca65f61fafe9d1c89633074b467160cc4bde8589f2fb12a7dc8"
+    },
+    {
+      "path": "GITHUB_DEPLOY_ES_V43.md",
+      "bytes": 2817,
+      "sha256": "c2aa6daeffba0bc82041ac519f5e1a02fdfb3204c77f3c48ebe0c3d661df8747"
+    },
+    {
+      "path": "README_ES.md",
+      "bytes": 4653,
+      "sha256": "15b490f9c3c51d12a5f3fc4a27038845783e06aff4ab5e268c115a5ab7bb0d3a"
+    },
+    {
+      "path": "SHA256SUMS_V41.txt",
+      "bytes": 41979,
+      "sha256": "e51664819a3b2b97b496ca3f5a0bac96d7f6f5755fac6c992b45a7ec8a326881"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 1111,
+      "sha256": "610aeadc0d29a0ac2ea69dc5afd88bc5351212b6c3b740c7440c572be70040fd"
+    },
+    {
+      "path": "WORKFLOW_EXECUTION_STATUS_V41.json",
+      "bytes": 3141,
+      "sha256": "ecd947b5db391604307d1af3e8c56452c1d69e59ce15199f303ee05a0fc8faea"
+    },
+    {
+      "path": "WORKFLOW_EXECUTION_STATUS_V42.json",
+      "bytes": 3083,
+      "sha256": "7646bc16b3f75ea4ef2d8b08d9be63b37c3b42df0429c6ac0e1e7bc49935a6ba"
+    },
+    {
+      "path": "anims/2handshoot_blend01.smd",
+      "bytes": 179751,
+      "sha256": "272038b0d11ea6f7deaa486399bb3d5471214e432d7f2f5e580526c746b50509"
+    },
+    {
+      "path": "anims/2handshoot_blend02.smd",
+      "bytes": 179751,
+      "sha256": "751a187fae7a5c42e14562fe3a28b27adf8d30487b5e99b7c3803708f11137d0"
+    },
+    {
+      "path": "anims/Angry.smd",
+      "bytes": 977850,
+      "sha256": "15e80306433166c9dd3f609761603c927fb5259342b0e1896c0ed68e8aa500ef"
+    },
+    {
+      "path": "anims/By_Shinsen_blend01.smd",
+      "bytes": 321326,
+      "sha256": "be63be080b6bc5c3c5ca3e52b48e0adbb82d8ad2040f88d1bf49be4c19185868"
+    },
+    {
+      "path": "anims/By_Shinsen_blend02.smd",
+      "bytes": 321320,
+      "sha256": "33e2ded1cdd911a77b8a89684cf8441859d4a1eeaa3de8b3622115c173f0dcb0"
+    },
+    {
+      "path": "anims/Clapping_blend01.smd",
+      "bytes": 213495,
+      "sha256": "1a0ea97e10a3c4c27805e6f2691e808dbc53b95e93d6b6151c28aaa118453dd6"
+    },
+    {
+      "path": "anims/Clapping_blend02.smd",
+      "bytes": 213495,
+      "sha256": "1a0ea97e10a3c4c27805e6f2691e808dbc53b95e93d6b6151c28aaa118453dd6"
+    },
+    {
+      "path": "anims/Excited.smd",
+      "bytes": 806748,
+      "sha256": "8ab2c454760bdb7e1eda3872b8d675a5b7532ff5f137b288df6d8f254e28e5b3"
+    },
+    {
+      "path": "anims/Laying_pose2_blend01.smd",
+      "bytes": 19134,
+      "sha256": "0f6dc53711303210621eb4cfa834af92429ba73633df9b046d7c82821da86297"
+    },
+    {
+      "path": "anims/Laying_pose2_blend02.smd",
+      "bytes": 19134,
+      "sha256": "3e951f7603b783b6bde06a193db2be110cce81869b575a79f2931de879b6efb0"
+    },
+    {
+      "path": "anims/Laying_pose_blend01.smd",
+      "bytes": 19311,
+      "sha256": "bcdbf7864fe8c8fc67600d57cfcdc0f2381a3f74e00eaf77b4a96960ec5f5221"
+    },
+    {
+      "path": "anims/Laying_pose_blend02.smd",
+      "bytes": 19311,
+      "sha256": "7645903ee1e03b7d676195f78743e75c32400635f04f838cfd0a341275767f1c"
+    },
+    {
+      "path": "anims/NorthernSoulSpin.smd",
+      "bytes": 704149,
+      "sha256": "3ec8c5de2071e0ea4e02261f9700eec9d0af98f9c484899b0d488d68ccf4b634"
+    },
+    {
+      "path": "anims/Petting.smd",
+      "bytes": 691928,
+      "sha256": "fa23d46b2c541c6f8dd89768b9c535345ed61dab249967684891db7850f2e49f"
+    },
+    {
+      "path": "anims/Rejected.smd",
+      "bytes": 835524,
+      "sha256": "2afe9286b20b6bfd4c0c7887d32cd08fcf475521a0ba8bb2f73daf626d5c1411"
+    },
+    {
+      "path": "anims/Sitting_blend01.smd",
+      "bytes": 13518,
+      "sha256": "6930080b6df706fbb353d16147f8a95bb2594a2d78db1641ad22894efed37ddc"
+    },
+    {
+      "path": "anims/Sitting_blend02.smd",
+      "bytes": 13518,
+      "sha256": "6930080b6df706fbb353d16147f8a95bb2594a2d78db1641ad22894efed37ddc"
+    },
+    {
+      "path": "anims/Thankfull.smd",
+      "bytes": 528072,
+      "sha256": "0dd8b6cd604f8ef802feb1fd786253f371d7ac17b9395f4e6f67bcb375a944fe"
+    },
+    {
+      "path": "anims/caramelldansen.smd",
+      "bytes": 733135,
+      "sha256": "142df1f6bf620d50a814903d6949875318c0fec3afbf3cc180e8679309696cf5"
+    },
+    {
+      "path": "anims/crawl_blend01.smd",
+      "bytes": 179405,
+      "sha256": "de66991aed8a89195bfefd8eec1771cb966316ba17e92798370c66f383b2a212"
+    },
+    {
+      "path": "anims/crawl_blend02.smd",
+      "bytes": 179405,
+      "sha256": "843449abd77666f2cb71c8f7d31d4c5ab79204ad475d1301b092ac7f9b613f74"
+    },
+    {
+      "path": "anims/crouch_aim_bow_blend01.smd",
+      "bytes": 122021,
+      "sha256": "0e54ef3c034d12990a723217dd4af8a76af19f8e5661ec2bc64065597fc31d28"
+    },
+    {
+      "path": "anims/crouch_aim_bow_blend02.smd",
+      "bytes": 122042,
+      "sha256": "d5ab64b05c54398448c319182f9be854363c5ddb7e9f8235899d79cdeef46bb2"
+    },
+    {
+      "path": "anims/crouch_aim_bowscope_blend01.smd",
+      "bytes": 121916,
+      "sha256": "4a9b234b8a279edd71ac0c79a8a1a981c9aa9a848fb0bde9b70836621ed7a0de"
+    },
+    {
+      "path": "anims/crouch_aim_bowscope_blend02.smd",
+      "bytes": 121958,
+      "sha256": "50317f4502d3fd6a486f4844bc786ac83ef1ad079a8b30210be376e0629a6a84"
+    },
+    {
+      "path": "anims/crouch_aim_crowbar_blend01.smd",
+      "bytes": 127481,
+      "sha256": "412df03cd6334e41c5db9be771ed729c258eb642a2ad8a502fc90ee2332282f2"
+    },
+    {
+      "path": "anims/crouch_aim_crowbar_blend02.smd",
+      "bytes": 127593,
+      "sha256": "6ce0f63da585c9861bd29d545106dfc59acf64b64bff9c395e88ce3702143493"
+    },
+    {
+      "path": "anims/crouch_aim_egon_blend01.smd",
+      "bytes": 122399,
+      "sha256": "6d9d5aa8834c7be3737c34e29ba27825eb435efddb3f11aa771cc9f3a2a93a3a"
+    },
+    {
+      "path": "anims/crouch_aim_egon_blend02.smd",
+      "bytes": 122483,
+      "sha256": "66f704b5f6d77abf42209c15bfda345e6fecccd973c2f3ac9cd9b5757aa635bd"
+    },
+    {
+      "path": "anims/crouch_aim_gauss_blend01.smd",
+      "bytes": 121727,
+      "sha256": "6974eab6bdb7d3ee82e92e3de5cc92161ef3da849c63ad6cea16d0e92b39b99a"
+    },
+    {
+      "path": "anims/crouch_aim_gauss_blend02.smd",
+      "bytes": 121769,
+      "sha256": "51f547db458aa46a347504a58519a2d8a42c76b84e0461e91134aecbd46cef05"
+    },
+    {
+      "path": "anims/crouch_aim_gren_blend01.smd",
+      "bytes": 127698,
+      "sha256": "023a199f84af1511eaf8f68f2b6087251f3d1258d872def4db27ecf907339d03"
+    },
+    {
+      "path": "anims/crouch_aim_gren_blend02.smd",
+      "bytes": 127638,
+      "sha256": "ad0f0abdf1aa78b45dcac8a914625f8d578c6d36c6c90addf9af1a087d0ec4eb"
+    },
+    {
+      "path": "anims/crouch_aim_hive_blend01.smd",
+      "bytes": 121916,
+      "sha256": "4239d1cb3360a8a5e28bedb57bba6644701ef256518ff9c4dca05f39d0421d6c"
+    },
+    {
+      "path": "anims/crouch_aim_hive_blend02.smd",
+      "bytes": 122000,
+      "sha256": "012830a39e3f9d58d5ef318c52052ef3dc70330e8a7feea32e091dcb3ae60e20"
+    },
+    {
+      "path": "anims/crouch_aim_m16_blend01.smd",
+      "bytes": 121937,
+      "sha256": "683f6b5695d3807a822034903f070b7d0b57d578fea128f5e566bf3fd289b287"
+    },
+    {
+      "path": "anims/crouch_aim_m16_blend02.smd",
+      "bytes": 121958,
+      "sha256": "53493ca84b80810d488342c7726ba9901f5ad4c856b6d43f7f80386e94a2c75f"
+    },
+    {
+      "path": "anims/crouch_aim_minigun_blend01.smd",
+      "bytes": 13572,
+      "sha256": "b5b128d948dd954b28160c30dfc115ccede7ded842dba3779883049ab01f23c3"
+    },
+    {
+      "path": "anims/crouch_aim_minigun_blend02.smd",
+      "bytes": 13574,
+      "sha256": "0103261d24eaa766f6683f570853b8ee9762f38ba626f2c4e0a6bcefeb6eeb5e"
+    },
+    {
+      "path": "anims/crouch_aim_mp5_blend01.smd",
+      "bytes": 122042,
+      "sha256": "7b2c20e8769ec1b9967f58bd74671bd03eec7e79a83854aca0b5288e6c8213f7"
+    },
+    {
+      "path": "anims/crouch_aim_mp5_blend02.smd",
+      "bytes": 122084,
+      "sha256": "913815166a43f388ffb903a5fded9e784f4963026e75420d2700ea4c8878a08e"
+    },
+    {
+      "path": "anims/crouch_aim_onehanded_blend01.smd",
+      "bytes": 184628,
+      "sha256": "8e5b6747ccd514595eb60714b430468adaf0e2c423d29c73e63f6e0e5aa4cec8"
+    },
+    {
+      "path": "anims/crouch_aim_onehanded_blend02.smd",
+      "bytes": 184724,
+      "sha256": "8e754172ee51d26e731ce1b8d9028aa013050a73180b9ab54c6d95e727bb6d00"
+    },
+    {
+      "path": "anims/crouch_aim_python_blend01.smd",
+      "bytes": 122336,
+      "sha256": "652adc7a7b26f378e022f6a519c0806e9a02e7ad293255efe1819c3fc8b08209"
+    },
+    {
+      "path": "anims/crouch_aim_python_blend02.smd",
+      "bytes": 122378,
+      "sha256": "56ecfe2feed059c63fdfc3ae11b16c58d0e9ffb68445274479324f65ab7a0822"
+    },
+    {
+      "path": "anims/crouch_aim_rpg_blend01.smd",
+      "bytes": 122084,
+      "sha256": "b720911f6fd34cc9b33008cd69f49b8a8bd321b23a840381dce36bf24719a15f"
+    },
+    {
+      "path": "anims/crouch_aim_rpg_blend02.smd",
+      "bytes": 122105,
+      "sha256": "70a526a4da49a1e0d0ec50e1339acb35f07f540e7bdc9d0d09d4229ecc600619"
+    },
+    {
+      "path": "anims/crouch_aim_saw_blend01.smd",
+      "bytes": 122126,
+      "sha256": "e0e5aedf1fd2020588223f9e46d17f41cc888c031781497d2cb9a9785d32fa25"
+    },
+    {
+      "path": "anims/crouch_aim_saw_blend02.smd",
+      "bytes": 122189,
+      "sha256": "b416cfe306639f0089ed61fff3478213ca684da4b73737d17f95ac01873ae7aa"
+    },
+    {
+      "path": "anims/crouch_aim_shotgun_blend01.smd",
+      "bytes": 122252,
+      "sha256": "7a4a5d2feca9592089073c177d86a76c3204e90b893193e384c91534fcd16b4c"
+    },
+    {
+      "path": "anims/crouch_aim_shotgun_blend02.smd",
+      "bytes": 122252,
+      "sha256": "1b8e50f15f3a17b07d17d47d58fa1d102c57e13fd6349b546bcf8810f38a3b13"
+    },
+    {
+      "path": "anims/crouch_aim_snark_blend01.smd",
+      "bytes": 122276,
+      "sha256": "156d841b958fdbc9c742b430c6dca859f6aead4447a80dd23ac7dcb85416113b"
+    },
+    {
+      "path": "anims/crouch_aim_snark_blend02.smd",
+      "bytes": 122303,
+      "sha256": "f7a34b5aafea264e70c85a66aa0e13caf206ed8a340f6501a0425a4989802b6e"
+    },
+    {
+      "path": "anims/crouch_aim_sniper_blend01.smd",
+      "bytes": 122168,
+      "sha256": "20866eaa4d4b2db2facea75c594e343c08c34c66575d302ec73c9234278b75f9"
+    },
+    {
+      "path": "anims/crouch_aim_sniper_blend02.smd",
+      "bytes": 122147,
+      "sha256": "e1028827059cad7d22164053232783e6e029c14697826213afefa332b2319269"
+    },
+    {
+      "path": "anims/crouch_aim_sniperscope_blend01.smd",
+      "bytes": 122063,
+      "sha256": "9cfa0c16be082965c954aa43614871bf300e1c3547bb79efd69f04ee403d1462"
+    },
+    {
+      "path": "anims/crouch_aim_sniperscope_blend02.smd",
+      "bytes": 122042,
+      "sha256": "52373d1f04178c640479a157d2d611aeec6646c6cb0d2444af2472a2b8198190"
+    },
+    {
+      "path": "anims/crouch_aim_trip_blend01.smd",
+      "bytes": 122010,
+      "sha256": "20930f23d61eeab81ebece95c384101efc2d33737aa2e88286e0200350fdfad5"
+    },
+    {
+      "path": "anims/crouch_aim_trip_blend02.smd",
+      "bytes": 122034,
+      "sha256": "f1b752963a0a704ae03de87ad785d1b4170548d1fe2dc1f5bd3a014669191f54"
+    },
+    {
+      "path": "anims/crouch_aim_uzis_blend01.smd",
+      "bytes": 122000,
+      "sha256": "07938dfbfb4f3c290a59a8c5bb8905ea3129ab74e1e44f82b3b334b992523b45"
+    },
+    {
+      "path": "anims/crouch_aim_uzis_blend02.smd",
+      "bytes": 122021,
+      "sha256": "58b36d0429c5e9b9cd1fc170bc4077a2a027350c62431d2d0ceae4df3a12dc82"
+    },
+    {
+      "path": "anims/crouch_cock_gren_blend01.smd",
+      "bytes": 87707,
+      "sha256": "99eaadc05245cf55e22530dd7cebf607f846abcdfe68c2c08f79e4dc0aa4ec37"
+    },
+    {
+      "path": "anims/crouch_cock_gren_blend02.smd",
+      "bytes": 87733,
+      "sha256": "47cdb5f0f487087774d1c4beeb83f802c45da815bfc079645ae8685c96f0f6c0"
+    },
+    {
+      "path": "anims/crouch_cock_wrench_blend01.smd",
+      "bytes": 58830,
+      "sha256": "93020e936bc886845893d4e08a50d94ca86e2910d73f226f799a176f9d733223"
+    },
+    {
+      "path": "anims/crouch_cock_wrench_blend02.smd",
+      "bytes": 58830,
+      "sha256": "7e6f3bb1578afd1c987c6791c53cda7bb08fe5c470db9b1691645f24e4ed6b22"
+    },
+    {
+      "path": "anims/crouch_draw_bow_blend01.smd",
+      "bytes": 65010,
+      "sha256": "7d65ba3770a266cee2689a952834ec9eeb2dd63903bb6a8dd3863c028975d159"
+    },
+    {
+      "path": "anims/crouch_draw_bow_blend02.smd",
+      "bytes": 65022,
+      "sha256": "08407028a62c47a245cc2c1f661bf9307b98b658cf936cd315193d32f5daae54"
+    },
+    {
+      "path": "anims/crouch_draw_crowbar_blend01.smd",
+      "bytes": 47705,
+      "sha256": "2ed5d7f6dc7afc905ccc4636534d17ba0fa83e82f7855cfd0d8f33cf8dbcf380"
+    },
+    {
+      "path": "anims/crouch_draw_crowbar_blend02.smd",
+      "bytes": 47724,
+      "sha256": "113cac7262df28f0e69d1932a696bf1d364e6901694c957c68ded754ab423344"
+    },
+    {
+      "path": "anims/crouch_draw_egon_blend01.smd",
+      "bytes": 65140,
+      "sha256": "a90a4f13635951a03dad8cffac516163a637600c8361b6a10b36f10335044be0"
+    },
+    {
+      "path": "anims/crouch_draw_egon_blend02.smd",
+      "bytes": 65159,
+      "sha256": "0034c833d45495b90146bffeaa9e4060a2c8814819d918b9a983038630daa695"
+    },
+    {
+      "path": "anims/crouch_draw_gauss_blend01.smd",
+      "bytes": 64804,
+      "sha256": "66af108a47bc64b156effe72dc1eae6f5dba79cc908cc2b04c63589574a3d1be"
+    },
+    {
+      "path": "anims/crouch_draw_gauss_blend02.smd",
+      "bytes": 64806,
+      "sha256": "96225d44351b0143f085b091a0aac4ff59eeaef5e1af1fdd80d367379ac7e07f"
+    },
+    {
+      "path": "anims/crouch_draw_gren_blend01.smd",
+      "bytes": 47792,
+      "sha256": "2c3eaee854cc4fd4db99456899c3c0f483021e31347b5c9e47bdb4f3f796f625"
+    },
+    {
+      "path": "anims/crouch_draw_gren_blend02.smd",
+      "bytes": 47792,
+      "sha256": "110601feeb962a79a5f42e5db7b9001a8945147142c21b5f0b582bf55d7252a1"
+    },
+    {
+      "path": "anims/crouch_draw_hive_blend01.smd",
+      "bytes": 42067,
+      "sha256": "aad93503367d2355d481be2101b4b6b6ce3706f6aa3de3215492143d884d00b9"
+    },
+    {
+      "path": "anims/crouch_draw_hive_blend02.smd",
+      "bytes": 42084,
+      "sha256": "df781cd1b48a1214638f50a3e558c1c728eef160c1c77caa690d08c4538dc3b5"
+    },
+    {
+      "path": "anims/crouch_draw_m16_blend01.smd",
+      "bytes": 121936,
+      "sha256": "1a6df51c72a562d12205b8a7906967b7f87035558ed3f174d00ada6874cab737"
+    },
+    {
+      "path": "anims/crouch_draw_m16_blend02.smd",
+      "bytes": 121946,
+      "sha256": "73cc1f607be24ccaa1abd0f4ad95ce7ae122c211ac6cf40c8449055d82fb8f47"
+    },
+    {
+      "path": "anims/crouch_draw_minigun_blend01.smd",
+      "bytes": 93615,
+      "sha256": "c51b4da9c3b88802a37aa8aab5275f793e28eadb89f6c8cb799730bf30779995"
+    },
+    {
+      "path": "anims/crouch_draw_minigun_blend02.smd",
+      "bytes": 93608,
+      "sha256": "6efce70b3d426b95ff224d0f70989bd95187997db0f442243921df7718d6d9d4"
+    },
+    {
+      "path": "anims/crouch_draw_mp5_blend01.smd",
+      "bytes": 64947,
+      "sha256": "7de3af4dd8ffa1f1c81b24cdbd0d1491cf4bb38047cac400c49d535729c9611f"
+    },
+    {
+      "path": "anims/crouch_draw_mp5_blend02.smd",
+      "bytes": 64960,
+      "sha256": "7cbfce4935cbc455dae46d45409df020864c3e6b293c6943bb5250c99cf79597"
+    },
+    {
+      "path": "anims/crouch_draw_onehanded_blend01.smd",
+      "bytes": 70693,
+      "sha256": "5f00a6484f2fa7b9993f9662711d60f30413fdac05f03c1b9684198ba627ba05"
+    },
+    {
+      "path": "anims/crouch_draw_onehanded_blend02.smd",
+      "bytes": 70701,
+      "sha256": "2055c8f5d911b638b59af119817540a54a6178cf5f8efb4224daca71499a408f"
+    },
+    {
+      "path": "anims/crouch_draw_python_blend01.smd",
+      "bytes": 65091,
+      "sha256": "be539c7a6d150957d34ede678fa40911e56d4b69867b15d7795077b3dd46fc6c"
+    },
+    {
+      "path": "anims/crouch_draw_python_blend02.smd",
+      "bytes": 65095,
+      "sha256": "959bd170cc3a6f2381bc4c8fba1cf519b6008c2c314f21cb02030f6a1bb30fcb"
+    },
+    {
+      "path": "anims/crouch_draw_rpg_blend01.smd",
+      "bytes": 64977,
+      "sha256": "d24647c2508bdbaacbcc3506df05bf39d87d29ee6b1dbac4c4d1c905f494a778"
+    },
+    {
+      "path": "anims/crouch_draw_rpg_blend02.smd",
+      "bytes": 64984,
+      "sha256": "2cd3ba2b0f84a7a5d5971572f62938db896030075fbc21347f16a37e8ee399d4"
+    },
+    {
+      "path": "anims/crouch_draw_saw_blend01.smd",
+      "bytes": 122120,
+      "sha256": "a77aed561898b300fdecc31c351d997174d8a60ab7bf7b60647762bd2e01f54d"
+    },
+    {
+      "path": "anims/crouch_draw_saw_blend02.smd",
+      "bytes": 122151,
+      "sha256": "f8a1ad076cbb1d50128bf3686d5135a1853cebe88b90f4c24bd5d5a1ca1d733a"
+    },
+    {
+      "path": "anims/crouch_draw_shotgun_blend01.smd",
+      "bytes": 65058,
+      "sha256": "b8a474f82c2c2dc8082b4666444581ba05034a5d1c98e334018cac9c448cb0fb"
+    },
+    {
+      "path": "anims/crouch_draw_shotgun_blend02.smd",
+      "bytes": 65046,
+      "sha256": "0f978fb41dfbb0a8e426eecc31372ac8a1633598dba270573176613aebaf6bc5"
+    },
+    {
+      "path": "anims/crouch_draw_snark_blend01.smd",
+      "bytes": 65106,
+      "sha256": "6c9ba1bf63291963df7b273eb38df07779d80a319cdc81f66389ee813817690d"
+    },
+    {
+      "path": "anims/crouch_draw_snark_blend02.smd",
+      "bytes": 65115,
+      "sha256": "00dbc0bfc61dd2a88513d2fb98fc3cba120be357143946b4002fe1912267e0d7"
+    },
+    {
+      "path": "anims/crouch_draw_sniper_blend01.smd",
+      "bytes": 65057,
+      "sha256": "9d42443a3b2bf79615d284b16158cc6fcb08e68907f320f77ea60d4c16844e04"
+    },
+    {
+      "path": "anims/crouch_draw_sniper_blend02.smd",
+      "bytes": 65048,
+      "sha256": "5ed1eaeed8da4abb8684a23d295bf4108cc179023ee0fe0b97f967c3b8c42ba8"
+    },
+    {
+      "path": "anims/crouch_draw_trip_blend01.smd",
+      "bytes": 70643,
+      "sha256": "49565f39f9c6776478e5f74df268b44a1e87ae3a9576f8f9f02d4a8b6a89f35a"
+    },
+    {
+      "path": "anims/crouch_draw_trip_blend02.smd",
+      "bytes": 70647,
+      "sha256": "7688275347d67255666b7e5cb2b693e2c29b785d876c2822e9200ae975270c68"
+    },
+    {
+      "path": "anims/crouch_draw_uzis_blend01.smd",
+      "bytes": 64975,
+      "sha256": "2b9cd7e35d33210a8c7e930eb0763b131479f97cd71f10cf36eac29eb5f7d62e"
+    },
+    {
+      "path": "anims/crouch_draw_uzis_blend02.smd",
+      "bytes": 64981,
+      "sha256": "76774e2ee6bbc64e2b7104ae461a5012f1745060502a2cd42a5ee6b88119c535"
+    },
+    {
+      "path": "anims/crouch_draw_uzis_left_blend01.smd",
+      "bytes": 133451,
+      "sha256": "e09b7cc2fade792128e38b9e86e3846cd3da27428a526f29d779f6dce81fa6f1"
+    },
+    {
+      "path": "anims/crouch_draw_uzis_left_blend02.smd",
+      "bytes": 133444,
+      "sha256": "615625453b1b38dc72f4208813cb663010df8f478eedb0956ad589567819ed88"
+    },
+    {
+      "path": "anims/crouch_hold_gren_blend01.smd",
+      "bytes": 13552,
+      "sha256": "17a34509a91f0b3dfe93f9ef81cffb6ad0096097a4046e9b347081482dae7c05"
+    },
+    {
+      "path": "anims/crouch_hold_gren_blend02.smd",
+      "bytes": 13556,
+      "sha256": "cb689a34bb407acf1979af2214ebade99716aac345be4ced4845efb5e7902fc1"
+    },
+    {
+      "path": "anims/crouch_hold_wrench_blend01.smd",
+      "bytes": 53181,
+      "sha256": "f8e25d7904e3faabe25922592913f052224cd4b1fe1fbaa51b6130289b3e35e8"
+    },
+    {
+      "path": "anims/crouch_hold_wrench_blend02.smd",
+      "bytes": 53190,
+      "sha256": "b96fb65c97e4ba2c4b84d644b2aac854eb84553cb592941c7f7c706c57e21000"
+    },
+    {
+      "path": "anims/crouch_idle_blend01.smd",
+      "bytes": 184985,
+      "sha256": "e8278414c950f2b04dfd85846f17cb5de2497aad04da5a1c7dc2ef40efdade2c"
+    },
+    {
+      "path": "anims/crouch_idle_blend02.smd",
+      "bytes": 184985,
+      "sha256": "04cd0d449ff30ebec8bb38c5c16ccb71a2a08a729b8a504e3a8d9a87a70ce036"
+    },
+    {
+      "path": "anims/crouch_reload_bow_blend01.smd",
+      "bytes": 264863,
+      "sha256": "19d4a936cbd3e3047518ab4f4ee2f5abd9966c7e655f5ec4c30ead61b4312ed0"
+    },
+    {
+      "path": "anims/crouch_reload_bow_blend02.smd",
+      "bytes": 264873,
+      "sha256": "cf02dfac92e408751011768e9169ffc71dd9da983a0c9e5345c80c5253291c21"
+    },
+    {
+      "path": "anims/crouch_reload_m16_blend01.smd",
+      "bytes": 578415,
+      "sha256": "11222ec440ed759b76ed401a63578f375eba9db1a012a074c7aa0be93335c9f2"
+    },
+    {
+      "path": "anims/crouch_reload_m16_blend02.smd",
+      "bytes": 578423,
+      "sha256": "d9f462a48bd291508f0bfdd6f23089a8fc23393edea9f0336c3f76a7fce970f0"
+    },
+    {
+      "path": "anims/crouch_reload_m203_blend01.smd",
+      "bytes": 378526,
+      "sha256": "767719084a80ba4e697db0d877e90145746f60ae51f6a560de43ef0dc6eda20f"
+    },
+    {
+      "path": "anims/crouch_reload_m203_blend02.smd",
+      "bytes": 378544,
+      "sha256": "b53be07f48c7ca4e6cfdc418c34271e17bb1897cce96dfd6b1ec66d7cc5a5e80"
+    },
+    {
+      "path": "anims/crouch_reload_mp5_blend01.smd",
+      "bytes": 139148,
+      "sha256": "f76e4271a4306191014b1dda3f67cb55e0fd1349191e7a353c5a3b551fef6f2a"
+    },
+    {
+      "path": "anims/crouch_reload_mp5_blend02.smd",
+      "bytes": 139162,
+      "sha256": "4dbbbbde7a2b4c50d40e8ca11349fb9ab0e1a3b69e3d6826ee90e31244db135e"
+    },
+    {
+      "path": "anims/crouch_reload_onehanded_blend01.smd",
+      "bytes": 179109,
+      "sha256": "2473de40d88d532f921a094d4e49644f21096d3c191df28a0ad4f07bbc74615b"
+    },
+    {
+      "path": "anims/crouch_reload_onehanded_blend02.smd",
+      "bytes": 179129,
+      "sha256": "2d76a8acfc2ed2d0f50453af64bc73de9646f2b9dde7ed022594bf93165de250"
+    },
+    {
+      "path": "anims/crouch_reload_python_blend01.smd",
+      "bytes": 271050,
+      "sha256": "e6960e7d1e7ede36448b26736a1fbf487e0c5fa31cd437561d261e804782f432"
+    },
+    {
+      "path": "anims/crouch_reload_python_blend02.smd",
+      "bytes": 271053,
+      "sha256": "b3388a53fdae3a6ef1480ad9b62f313836962087ae092ca6b6c84fe5a792a2f1"
+    },
+    {
+      "path": "anims/crouch_reload_rpg_blend01.smd",
+      "bytes": 139196,
+      "sha256": "b555d27aa159bc0a676df4ddfb114589aa5078dcd5aee93159d4c5678fe70e39"
+    },
+    {
+      "path": "anims/crouch_reload_rpg_blend02.smd",
+      "bytes": 139193,
+      "sha256": "ee4586fbfd14e1469b154ba645172a47526b1e64980dd7106be4e2d86b3f643a"
+    },
+    {
+      "path": "anims/crouch_reload_saw_blend01.smd",
+      "bytes": 1150873,
+      "sha256": "6995fddf3f75f7025f840062b0c858094ecf9796b1b584e2defccdeed0d072af"
+    },
+    {
+      "path": "anims/crouch_reload_saw_blend02.smd",
+      "bytes": 1150955,
+      "sha256": "64b46632327bc2052f0558449c04c848a2fa9249ef6298a89c97f427c3b8f139"
+    },
+    {
+      "path": "anims/crouch_reload_shotgun_blend01.smd",
+      "bytes": 133605,
+      "sha256": "5f557e38f9ee50e0842e95549010f8bd4ab1c15fd675fb016b819041d660e4ca"
+    },
+    {
+      "path": "anims/crouch_reload_shotgun_blend02.smd",
+      "bytes": 133605,
+      "sha256": "5f557e38f9ee50e0842e95549010f8bd4ab1c15fd675fb016b819041d660e4ca"
+    },
+    {
+      "path": "anims/crouch_reload_sniper_blend01.smd",
+      "bytes": 264978,
+      "sha256": "dccd976e0d35fa0dd7a25bca7633c6f2e07c0adfd7ba01b8c18d8ff5293ffa45"
+    },
+    {
+      "path": "anims/crouch_reload_sniper_blend02.smd",
+      "bytes": 264970,
+      "sha256": "2dcc34a0e1f2fd9af15f1b0964df5e35cb6a65cf306822dac80b4cd2710b99b0"
+    },
+    {
+      "path": "anims/crouch_reload_uzis_left_blend01.smd",
+      "bytes": 202095,
+      "sha256": "252f9fe00a79d0ef64921a8b02316e8359db97b7f42f6b190c0cddb5aef18ad3"
+    },
+    {
+      "path": "anims/crouch_reload_uzis_left_blend02.smd",
+      "bytes": 202104,
+      "sha256": "5099a9ed47bbefb3ba78c10f6bb18d85e6515c472524a1efcb11688f792f26df"
+    },
+    {
+      "path": "anims/crouch_reload_uzis_right_blend01.smd",
+      "bytes": 201871,
+      "sha256": "d081e6c734c3e1e286229abd517536ee40c92d010896ce460fb05d51fa284a01"
+    },
+    {
+      "path": "anims/crouch_reload_uzis_right_blend02.smd",
+      "bytes": 201880,
+      "sha256": "31b4894ef4bf5ceff7b4992f0024d44b109646f4ef620ef4cf58dac2f472ceb2"
+    },
+    {
+      "path": "anims/crouch_shoot_bow_blend01.smd",
+      "bytes": 42090,
+      "sha256": "4b53df3db5931e0a029e2261e950a2a2e2c91b841e1b9e47cf8697248fec507e"
+    },
+    {
+      "path": "anims/crouch_shoot_bow_blend02.smd",
+      "bytes": 42097,
+      "sha256": "12405ba8ca44d55c3561e8df85d7833b87858f14c399b80a2953f364ba208892"
+    },
+    {
+      "path": "anims/crouch_shoot_bowscope_blend01.smd",
+      "bytes": 42063,
+      "sha256": "5ba6affc623f1e84031b3783695ee5786adda701be93b681b8571377413ef707"
+    },
+    {
+      "path": "anims/crouch_shoot_bowscope_blend02.smd",
+      "bytes": 42077,
+      "sha256": "a1ff2d720d296e46eccbe75702b691172e4a2f916cdbb30becd94cf5338eafa4"
+    },
+    {
+      "path": "anims/crouch_shoot_crowbar_blend01.smd",
+      "bytes": 76221,
+      "sha256": "6bb70aa633cd078af51e007147a8932828d4d4dfb860d89a5c9d35903a88aaa0"
+    },
+    {
+      "path": "anims/crouch_shoot_crowbar_blend02.smd",
+      "bytes": 76255,
+      "sha256": "c80e72ad36fd5a393ade96b8ea037725d932706688ea7e0147240aa74e813dea"
+    },
+    {
+      "path": "anims/crouch_shoot_egon_blend01.smd",
+      "bytes": 13594,
+      "sha256": "db97122566e62c836361590b0bc59f837630a25891b374c2acd517c94478bf63"
+    },
+    {
+      "path": "anims/crouch_shoot_egon_blend02.smd",
+      "bytes": 13602,
+      "sha256": "60e7abd99ac11f0d8ed17cb430fdb456d617f0cbd7c78a0c13e034f6f853a096"
+    },
+    {
+      "path": "anims/crouch_shoot_gauss_blend01.smd",
+      "bytes": 64785,
+      "sha256": "1dcad1f23de4e196bc958a4f3c1c52cf3903b1f57b8ac82d46dbd566983c0061"
+    },
+    {
+      "path": "anims/crouch_shoot_gauss_blend02.smd",
+      "bytes": 64808,
+      "sha256": "6c12cea1fe35e4ea8100a5c0c81847a433f1213d4bd6902e91983b9a61acf31c"
+    },
+    {
+      "path": "anims/crouch_shoot_gren_blend01.smd",
+      "bytes": 110577,
+      "sha256": "6a68c585a51b1d2eb9334b376db5e9539dcb83b2b57b5e114ae5345ac290f338"
+    },
+    {
+      "path": "anims/crouch_shoot_gren_blend02.smd",
+      "bytes": 110602,
+      "sha256": "5fd8c4525d1af67768544fb010e6c57010e92f606c9c4f7ad917b9adbd03007c"
+    },
+    {
+      "path": "anims/crouch_shoot_hive_blend01.smd",
+      "bytes": 42063,
+      "sha256": "c1abb9527b7fb2d90b6c238d7b92ee0104d4fc44bb1bdd9881785a3b1ae9d225"
+    },
+    {
+      "path": "anims/crouch_shoot_hive_blend02.smd",
+      "bytes": 42091,
+      "sha256": "5b128dcb162b0892f6bf83c06a1a685fa9bf8f550c24a7ff674e678643c76e58"
+    },
+    {
+      "path": "anims/crouch_shoot_m16_blend01.smd",
+      "bytes": 47772,
+      "sha256": "bcd56f5e36582afc1751a271b99491c9a3fed14b09f017ebc5bd34ab1ac88793"
+    },
+    {
+      "path": "anims/crouch_shoot_m16_blend02.smd",
+      "bytes": 47780,
+      "sha256": "2fb299369da12750d9fbe595b233ec88b1d7318f63257fc9904b0b452ec11197"
+    },
+    {
+      "path": "anims/crouch_shoot_m203_blend01.smd",
+      "bytes": 36345,
+      "sha256": "639a9090db282492fcaf8cc50c6964a1fe35f9adfc61ab170aaf6af99135b021"
+    },
+    {
+      "path": "anims/crouch_shoot_m203_blend02.smd",
+      "bytes": 36351,
+      "sha256": "495bc66ca5c56eabedbfaa1f4adece3dd7bcac53cc29f26c22db98bbda0a1b3f"
+    },
+    {
+      "path": "anims/crouch_shoot_minigun_blend01.smd",
+      "bytes": 13572,
+      "sha256": "b5b128d948dd954b28160c30dfc115ccede7ded842dba3779883049ab01f23c3"
+    },
+    {
+      "path": "anims/crouch_shoot_minigun_blend02.smd",
+      "bytes": 13574,
+      "sha256": "0103261d24eaa766f6683f570853b8ee9762f38ba626f2c4e0a6bcefeb6eeb5e"
+    },
+    {
+      "path": "anims/crouch_shoot_mp5_blend01.smd",
+      "bytes": 47814,
+      "sha256": "566090a786535a97d8224d025edf67cd818ef53a824a2087be033b1ebb6be636"
+    },
+    {
+      "path": "anims/crouch_shoot_mp5_blend02.smd",
+      "bytes": 47830,
+      "sha256": "b68e59ba30afc724193f9de19dc845afad94de4de0c951cac874e6cdaaace417"
+    },
+    {
+      "path": "anims/crouch_shoot_onehanded_blend01.smd",
+      "bytes": 53462,
+      "sha256": "1ce5732b724ed307efcea502fd65da27efc6a521eab8cd15a38fb5a0fe263905"
+    },
+    {
+      "path": "anims/crouch_shoot_onehanded_blend02.smd",
+      "bytes": 53492,
+      "sha256": "08f205b23086d2f3046d11cbeba3ff6780676ad1d26bf5aed48fbe7783dd5603"
+    },
+    {
+      "path": "anims/crouch_shoot_python_blend01.smd",
+      "bytes": 53659,
+      "sha256": "d2fe2c46085e165af4489591dc264aefbd0f4afec6d2974b076c13d34291ac0f"
+    },
+    {
+      "path": "anims/crouch_shoot_python_blend02.smd",
+      "bytes": 53674,
+      "sha256": "ab7b2d4b34846ebcd5d6fcd3c9f6ca4a1cd3321584bffc96eb2b829451451d78"
+    },
+    {
+      "path": "anims/crouch_shoot_rpg_blend01.smd",
+      "bytes": 64942,
+      "sha256": "820314968ef7ba4182ae813a0f8263f5ca4e4468ad4ad8a8461a4e1b9f22778b"
+    },
+    {
+      "path": "anims/crouch_shoot_rpg_blend02.smd",
+      "bytes": 64953,
+      "sha256": "04c20d9892fe73d848a845826253575541f1f30e2d961b644f666f75fa9565b2"
+    },
+    {
+      "path": "anims/crouch_shoot_saw_blend01.smd",
+      "bytes": 30707,
+      "sha256": "37b5995d90d183ce04d81da882362b70c95b76480869d4940048a9d6f55d4ed8"
+    },
+    {
+      "path": "anims/crouch_shoot_saw_blend02.smd",
+      "bytes": 30717,
+      "sha256": "7fdc88dd92ca862c71b322431ec342e7b3d4ef4d14362a1c8f68b6e72925de44"
+    },
+    {
+      "path": "anims/crouch_shoot_shotgun_blend01.smd",
+      "bytes": 105063,
+      "sha256": "7b581e9db2f97bdcb266828d3bd65f3eb9819d31374425ab90d14c5a48814a8f"
+    },
+    {
+      "path": "anims/crouch_shoot_shotgun_blend02.smd",
+      "bytes": 105055,
+      "sha256": "9e1da2a6f11677da032eecf0dc174f413fa2d15be5a933dcb6f32890db699e7a"
+    },
+    {
+      "path": "anims/crouch_shoot_snark_blend01.smd",
+      "bytes": 65057,
+      "sha256": "31df0c4704415867412712683c79fb778468c7665c78cd877ad596711aceba21"
+    },
+    {
+      "path": "anims/crouch_shoot_snark_blend02.smd",
+      "bytes": 65063,
+      "sha256": "77fe86ce45fc7c452ef4084f9f87fc5a567f53bf62e05cb790bb42c6b37f3b75"
+    },
+    {
+      "path": "anims/crouch_shoot_sniper_blend01.smd",
+      "bytes": 36444,
+      "sha256": "bc9246443d9d068d1f2e21c1f66431a8ceba9c86434f843b658be786aa71ca9b"
+    },
+    {
+      "path": "anims/crouch_shoot_sniper_blend02.smd",
+      "bytes": 36438,
+      "sha256": "9a2c474f830b1056226bb75476e8d69d8356ec23d4cf5419b57ded9c03603190"
+    },
+    {
+      "path": "anims/crouch_shoot_sniperscope_blend01.smd",
+      "bytes": 42112,
+      "sha256": "8b19a9519512885d947e4b4e86f5176ee50b2af7516028ed695a943175010873"
+    },
+    {
+      "path": "anims/crouch_shoot_sniperscope_blend02.smd",
+      "bytes": 42105,
+      "sha256": "1ef59f80192bd85980b6f4ec22c09a4ebfe8f32be528e0d3df685fbc61e62f88"
+    },
+    {
+      "path": "anims/crouch_shoot_trip_blend01.smd",
+      "bytes": 82063,
+      "sha256": "aa0de1e5900af8c4ed3846016cd1798707c15aea1948e5c4eb9cc76daf0fe86e"
+    },
+    {
+      "path": "anims/crouch_shoot_trip_blend02.smd",
+      "bytes": 82056,
+      "sha256": "d543433ee4848761544af26c050959e7804b0e7659eb90fe4f2240ade80ff5c4"
+    },
+    {
+      "path": "anims/crouch_shoot_uzis_both_blend01.smd",
+      "bytes": 42091,
+      "sha256": "b08d290259112dda92a2a61bb343e69792eb2feab2b8d2211943e70eb287d5c3"
+    },
+    {
+      "path": "anims/crouch_shoot_uzis_both_blend02.smd",
+      "bytes": 42098,
+      "sha256": "fa87061dc38752e194dbc68754f1232c0a62d9e6808fb4d82f87a501d82b788a"
+    },
+    {
+      "path": "anims/crouch_shoot_uzis_left_blend01.smd",
+      "bytes": 42091,
+      "sha256": "da4c0a8e456fe6c99a9600f5e682cae4727ff44f935df6b80e173dd5114fa833"
+    },
+    {
+      "path": "anims/crouch_shoot_uzis_left_blend02.smd",
+      "bytes": 42098,
+      "sha256": "cd161797d4f9341ef2e8f59d21f555bc5366dabf53d868aa88891a1c2e022292"
+    },
+    {
+      "path": "anims/crouch_shoot_uzis_right_blend01.smd",
+      "bytes": 42091,
+      "sha256": "31a23d93285750af3f8442dc2bb5392da7fb93f97e1df302a022167d2235c92e"
+    },
+    {
+      "path": "anims/crouch_shoot_uzis_right_blend02.smd",
+      "bytes": 42098,
+      "sha256": "06d864b4e3d32ed5b47a70d5502e822450af9b6aee6d09e33f9b03d539d44f7d"
+    },
+    {
+      "path": "anims/crouch_shoot_wrench_blend01.smd",
+      "bytes": 178004,
+      "sha256": "b6c288d0cd84e0cf3b4ca301231c1e308958e6bb292245406ac27caa323d71e3"
+    },
+    {
+      "path": "anims/crouch_shoot_wrench_blend02.smd",
+      "bytes": 178020,
+      "sha256": "e44226cf62ba161f47a72a9718adb9fd2f19521f4240d6ac6c8070cce857ec6f"
+    },
+    {
+      "path": "anims/deadback_blend01.smd",
+      "bytes": 13566,
+      "sha256": "d20d5da7ae954fc4a51bc3d282bfe804465a3ca591592c3517efb8c420fe7665"
+    },
+    {
+      "path": "anims/deadback_blend02.smd",
+      "bytes": 13566,
+      "sha256": "d20d5da7ae954fc4a51bc3d282bfe804465a3ca591592c3517efb8c420fe7665"
+    },
+    {
+      "path": "anims/deadsitting_blend01.smd",
+      "bytes": 13524,
+      "sha256": "73e03902abc93f04c4ae2c54bc5480b584d16011c25a39ce6ff3e806de99c643"
+    },
+    {
+      "path": "anims/deadsitting_blend02.smd",
+      "bytes": 13524,
+      "sha256": "6c0f5df64ae623825ab1a1a5a77fcde4dfa70ffdfc2c74610d1a42b29bef518f"
+    },
+    {
+      "path": "anims/deadstomach_blend01.smd",
+      "bytes": 13556,
+      "sha256": "b7d6867e028a1f5941059592d9f691285e204fed1106c99efd98767b4928189a"
+    },
+    {
+      "path": "anims/deadstomach_blend02.smd",
+      "bytes": 13556,
+      "sha256": "6776079010fdd5ccc8185f4a8f91019af1a5f055f14d0c44f9751c9c5e74003b"
+    },
+    {
+      "path": "anims/deadtable_blend01.smd",
+      "bytes": 13576,
+      "sha256": "473c8033622d7533e96f3254a30d3122afba92b196177d3168f695cb696936a0"
+    },
+    {
+      "path": "anims/deadtable_blend02.smd",
+      "bytes": 13576,
+      "sha256": "473c8033622d7533e96f3254a30d3122afba92b196177d3168f695cb696936a0"
+    },
+    {
+      "path": "anims/deep_idle_blend01.smd",
+      "bytes": 298545,
+      "sha256": "3220de949115748d9880e1fea3a507017ed660a23d71231aab60720e678362f0"
+    },
+    {
+      "path": "anims/deep_idle_blend02.smd",
+      "bytes": 298493,
+      "sha256": "2c7c00af2d23d4da7c6f7d3d595f626da7d38218f56b51ad64a54b7e76e1274e"
+    },
+    {
+      "path": "anims/die_backwards1_blend01.smd",
+      "bytes": 150569,
+      "sha256": "8b88789bc60ab9aedda64180e437b79db4b321e2ea00fd4409580f31005eac57"
+    },
+    {
+      "path": "anims/die_backwards1_blend02.smd",
+      "bytes": 150569,
+      "sha256": "af4fe989505a3a8a72de632dae4cc71b311ec8677a6cee912c4444b70023197e"
+    },
+    {
+      "path": "anims/die_backwards_blend01.smd",
+      "bytes": 219350,
+      "sha256": "bfceee10eaed1437f259f9d5711f46f89e9046cba1e84bdc0f0e40314f5a09e7"
+    },
+    {
+      "path": "anims/die_backwards_blend02.smd",
+      "bytes": 219350,
+      "sha256": "9ac15d7f85b6864525e3751db53043b48b4cf96a15e0577e771d55ce6c769b0a"
+    },
+    {
+      "path": "anims/die_forwards_blend01.smd",
+      "bytes": 116361,
+      "sha256": "ffc1470f4d2ab128027059f0ffc55b2b6bba9ebf6393d8c3e563e9e0f898ef05"
+    },
+    {
+      "path": "anims/die_forwards_blend02.smd",
+      "bytes": 116361,
+      "sha256": "acdc5640373b3c4222af4f631eb47e8700c28e3bac62e678caa11e78d10bc959"
+    },
+    {
+      "path": "anims/die_simple_blend01.smd",
+      "bytes": 116341,
+      "sha256": "a1e1a3d2360b028d9a3676d7295556ba4b2c9df64efc43725dad7ed9f3971c83"
+    },
+    {
+      "path": "anims/die_simple_blend02.smd",
+      "bytes": 116341,
+      "sha256": "7d9172e3f70df36a039df8549b01c20096385a6ce2e966635b9abdcae0251742"
+    },
+    {
+      "path": "anims/die_spin_blend01.smd",
+      "bytes": 128205,
+      "sha256": "83642bf53d869ff3b2083d9b2ed0416ccb0f0fc7c26eeaff0832ce9a4e1cfc3d"
+    },
+    {
+      "path": "anims/die_spin_blend02.smd",
+      "bytes": 128205,
+      "sha256": "8062c1b22ddd36afaef88378697b933f267057f10e1f1f2d9f1b0249f1064ad4"
+    },
+    {
+      "path": "anims/drivin.smd",
+      "bytes": 732980,
+      "sha256": "731b3f05b08abddc4974401296f199fe56be7734789c070b86ae7ab4da9f69bc"
+    },
+    {
+      "path": "anims/floss.smd",
+      "bytes": 733201,
+      "sha256": "8c2b755ed0750a1b707f7d08ef64dfa34888eab3fe8fc3a4ec80ef9b3ec89491"
+    },
+    {
+      "path": "anims/funky.smd",
+      "bytes": 732579,
+      "sha256": "fc8a8c641a6caadb73fb5b0118641160459ab825fcdb3f9d7d02a7cabd74d3df"
+    },
+    {
+      "path": "anims/gutshot_blend01.smd",
+      "bytes": 116361,
+      "sha256": "a8643bc4d47aae32a8cb91c44c355e9029115d42cdb4518ea2484341a5458bb2"
+    },
+    {
+      "path": "anims/gutshot_blend02.smd",
+      "bytes": 116361,
+      "sha256": "67f8a4985c36c4e779142c1b41ff86533867b8717905773705fe779539a43c05"
+    },
+    {
+      "path": "anims/headshot_blend01.smd",
+      "bytes": 167225,
+      "sha256": "e3b0cb23c37687f16b19f6fdbd9412737942a9e8b76fe9273f36938a455b1580"
+    },
+    {
+      "path": "anims/headshot_blend02.smd",
+      "bytes": 167225,
+      "sha256": "4377ed80fcb129dc7656fdf49a56b6a6aa3204a8847c7168673ef0426b1c7042"
+    },
+    {
+      "path": "anims/hiphopdance.smd",
+      "bytes": 731979,
+      "sha256": "e06e8088441cc5b113393d45e9b02f78f40a673957ccf36c602c184e0b46c35f"
+    },
+    {
+      "path": "anims/idle_blend01.smd",
+      "bytes": 299598,
+      "sha256": "d92f52aa86973b8c5fe98ba3464a828592a27e0fe6a2f55eccc18f06f401fef9"
+    },
+    {
+      "path": "anims/idle_blend02.smd",
+      "bytes": 299546,
+      "sha256": "2be8acb5715aeeeea7b1b2ad227c62edeedde33210461a325366568d0f2b0f78"
+    },
+    {
+      "path": "anims/jump_blend01.smd",
+      "bytes": 578157,
+      "sha256": "ec7160d0648cc0c556449156124271cefd90dbd80d703420619b0b0055e10fad"
+    },
+    {
+      "path": "anims/jump_blend02.smd",
+      "bytes": 578084,
+      "sha256": "170b41d941be6f51b15f5e44de4d42af0c23647bcbceb9d747fa0355f850bd49"
+    },
+    {
+      "path": "anims/liecomfy_blend01.smd",
+      "bytes": 7839,
+      "sha256": "73fca0f0b244683782cff3420d65d209dc01b229f8c3728bed32baf3171ca92e"
+    },
+    {
+      "path": "anims/liecomfy_blend02.smd",
+      "bytes": 7839,
+      "sha256": "73fca0f0b244683782cff3420d65d209dc01b229f8c3728bed32baf3171ca92e"
+    },
+    {
+      "path": "anims/liedown_blend01.smd",
+      "bytes": 513772,
+      "sha256": "6052728abc9d41b36429d16ba2309e84c2931f3b6a948b5405864b1489face83"
+    },
+    {
+      "path": "anims/liedown_blend02.smd",
+      "bytes": 513772,
+      "sha256": "a51edd8a4389947f6e2ed0bbcff8d8557d4e33625a2c864d4dafb841b0f38c84"
+    },
+    {
+      "path": "anims/long_jump.smd",
+      "bytes": 156304,
+      "sha256": "5478737f8880639caf4cb091c8592d27a120c356ce856a589903805f2338348a"
+    },
+    {
+      "path": "anims/looking.smd",
+      "bytes": 933592,
+      "sha256": "c1032e5455bc8c2f024c789803d8850e6fbd5bad10fd413ce01e2f3493ec047d"
+    },
+    {
+      "path": "anims/macarena.smd",
+      "bytes": 748778,
+      "sha256": "c2129bb0b898e2f12abb09f5d54164c39f506d570d93cbabce9f2d602ebe7a95"
+    },
+    {
+      "path": "anims/phone2.smd",
+      "bytes": 808356,
+      "sha256": "33ec50153333e0c5b28617fff70c66efaff0136a0bc9f4d8848213d97b45c4b1"
+    },
+    {
+      "path": "anims/player_anim_barnaclepull.smd",
+      "bytes": 463718,
+      "sha256": "9448b2230a725f410bffc17e2c983eda1ba8728f476e1c47db52afe37ad879b3"
+    },
+    {
+      "path": "anims/player_anim_barnaclepull_1.smd",
+      "bytes": 463811,
+      "sha256": "afc5739a28609660041336c8863c044b60ec838ec2d9d5de945c82b1733b800f"
+    },
+    {
+      "path": "anims/player_anim_barnaclepull_2.smd",
+      "bytes": 463812,
+      "sha256": "4a39ad9264ec12ed5aa33d022c069f28da010c17a248414005c774836c37cdbd"
+    },
+    {
+      "path": "anims/player_anim_barnaclepull_3.smd",
+      "bytes": 463811,
+      "sha256": "afc5739a28609660041336c8863c044b60ec838ec2d9d5de945c82b1733b800f"
+    },
+    {
+      "path": "anims/ref_aim_bow_blend01.smd",
+      "bytes": 121643,
+      "sha256": "b783d0ec5e6e54f44e650db93c48b23e5bae3c601986500fcfe5fa7a28ee27a1"
+    },
+    {
+      "path": "anims/ref_aim_bow_blend02.smd",
+      "bytes": 121643,
+      "sha256": "b550834af7e12ec44bd71c7cc2e1ac9a71c03f7638dbef7d8ab9042a69ae35ce"
+    },
+    {
+      "path": "anims/ref_aim_bowscope_blend01.smd",
+      "bytes": 121601,
+      "sha256": "03a5f0f0aea03394d4a71606d7cfb0785022a5ce8d40edfd5c5262dde5764458"
+    },
+    {
+      "path": "anims/ref_aim_bowscope_blend02.smd",
+      "bytes": 121622,
+      "sha256": "181befaa01a558681828a254d661aaae55a511bf52b253310cd798fc11137238"
+    },
+    {
+      "path": "anims/ref_aim_crowbar_blend01.smd",
+      "bytes": 127461,
+      "sha256": "18366cdb783f968253d22eef944459f6c0aa1e1f2d4c2203299fecd1ea4b5f52"
+    },
+    {
+      "path": "anims/ref_aim_crowbar_blend02.smd",
+      "bytes": 127549,
+      "sha256": "dea251422e77edbe94d38a4a7b31519762e0213ba03328ca47cb9332a8133766"
+    },
+    {
+      "path": "anims/ref_aim_egon_blend01.smd",
+      "bytes": 122105,
+      "sha256": "342847bd51244d58548defb512767a8d8d116a0d40f4c962315de8bad872dbaa"
+    },
+    {
+      "path": "anims/ref_aim_egon_blend02.smd",
+      "bytes": 122105,
+      "sha256": "b93cdabe527afd416c91e765535a02c6ea728db271c24bdf8662c93ee3f77cc0"
+    },
+    {
+      "path": "anims/ref_aim_gauss_blend01.smd",
+      "bytes": 121517,
+      "sha256": "7891b50003e83ac414a17dd1f719b03a0f281470874d1fc3accec3a1176d77c9"
+    },
+    {
+      "path": "anims/ref_aim_gauss_blend02.smd",
+      "bytes": 121496,
+      "sha256": "0f79f1f8e2d73e12f53e4cc4d086342b0edb99bfd6e09437492dfa56a00e8894"
+    },
+    {
+      "path": "anims/ref_aim_gren_blend01.smd",
+      "bytes": 127558,
+      "sha256": "dbab8247179397ef3a5663868afcd50168af4e7dd5ee74dcdb3f315d482238e2"
+    },
+    {
+      "path": "anims/ref_aim_gren_blend02.smd",
+      "bytes": 127651,
+      "sha256": "e6fdec6933ad9ad606fbe26a1cd839d43c1416f4cb5dd9563fc10548ab96ceaf"
+    },
+    {
+      "path": "anims/ref_aim_hive_blend01.smd",
+      "bytes": 121475,
+      "sha256": "2e91c865e8d71d0716ad97ef8532252d15593073092d78d997c9506475f7b1ff"
+    },
+    {
+      "path": "anims/ref_aim_hive_blend02.smd",
+      "bytes": 121559,
+      "sha256": "eaeada308cbd482b9f61db977108863458a7645f945f45315825af2b626a74cd"
+    },
+    {
+      "path": "anims/ref_aim_m16_blend01.smd",
+      "bytes": 121433,
+      "sha256": "25236c927278a9d93da1fa8be048311df338e89d2b3eeaa4213135f860005e9b"
+    },
+    {
+      "path": "anims/ref_aim_m16_blend02.smd",
+      "bytes": 121454,
+      "sha256": "886390329121e6421f2ec795ce3d4b0bb22246757f09b0618ee968ffa7a8f4e5"
+    },
+    {
+      "path": "anims/ref_aim_minigun_1_blend01.smd",
+      "bytes": 13524,
+      "sha256": "5b7e637bbd8fd735d28feab74604d1139609db8a4927d7e0506776f26df20eb6"
+    },
+    {
+      "path": "anims/ref_aim_minigun_1_blend02.smd",
+      "bytes": 13526,
+      "sha256": "25a56d0c57023f5e4622ac78249f97b135ad2a7c499ccd0c7e854ae86c161a89"
+    },
+    {
+      "path": "anims/ref_aim_minigun_blend01.smd",
+      "bytes": 13524,
+      "sha256": "5b7e637bbd8fd735d28feab74604d1139609db8a4927d7e0506776f26df20eb6"
+    },
+    {
+      "path": "anims/ref_aim_minigun_blend02.smd",
+      "bytes": 13526,
+      "sha256": "25a56d0c57023f5e4622ac78249f97b135ad2a7c499ccd0c7e854ae86c161a89"
+    },
+    {
+      "path": "anims/ref_aim_mp5_blend01.smd",
+      "bytes": 121727,
+      "sha256": "480eb3ee447c905de03e5322497220758fc3bdfed5bacb715f32b66b32ba6fd3"
+    },
+    {
+      "path": "anims/ref_aim_mp5_blend02.smd",
+      "bytes": 121748,
+      "sha256": "cedd48241b56eb584e59df8c1c4997d801f7ead28207d9dd54e021a3f4edbd55"
+    },
+    {
+      "path": "anims/ref_aim_onehanded_blend01.smd",
+      "bytes": 127236,
+      "sha256": "f51e3f80eff70d4ca8c5d152d5027c5ff8e88d1e24cb6920db47cd05aa4a3c57"
+    },
+    {
+      "path": "anims/ref_aim_onehanded_blend02.smd",
+      "bytes": 127290,
+      "sha256": "8de65f4aca1caad9bfd89ee926a113378880558f7b08675e849369736ae12d00"
+    },
+    {
+      "path": "anims/ref_aim_python_blend01.smd",
+      "bytes": 127444,
+      "sha256": "61aa372dcfacd59097061e1126a562e33d8b42ef9f9bd98ca44f6111bf584820"
+    },
+    {
+      "path": "anims/ref_aim_python_blend02.smd",
+      "bytes": 127466,
+      "sha256": "6ca1874a65e10d05e2fa3878df3ae548fcbbecd5d19cf63932acc7751b043da9"
+    },
+    {
+      "path": "anims/ref_aim_rpg_blend01.smd",
+      "bytes": 121769,
+      "sha256": "946bcb5dcef82750122ced7e62d727e9d7a8a58ca84698dd82ee95fc2cad5c6a"
+    },
+    {
+      "path": "anims/ref_aim_rpg_blend02.smd",
+      "bytes": 121769,
+      "sha256": "978e27cfe5ac8db9d3119e5201928e936622a4ad9aef9f80c3e7fce39c1ee2c0"
+    },
+    {
+      "path": "anims/ref_aim_saw_blend01.smd",
+      "bytes": 121580,
+      "sha256": "6eb8136cba0ffd9eae089c71e45b391bfd3bad8f817dc690dd84b9f634950543"
+    },
+    {
+      "path": "anims/ref_aim_saw_blend02.smd",
+      "bytes": 121622,
+      "sha256": "346eacde9047d1cc869072b14776d9b8076ab3fbf378a1abfc83afe83a69d247"
+    },
+    {
+      "path": "anims/ref_aim_shotgun_blend01.smd",
+      "bytes": 121706,
+      "sha256": "5917c68bb9b0b33f1b2292b1bc6cc5ae63846aee875b0dc054c086f755bef4cf"
+    },
+    {
+      "path": "anims/ref_aim_shotgun_blend02.smd",
+      "bytes": 121706,
+      "sha256": "a5e3f3a8075dc8ef42abd511ae2d9a48a20342e588dde01f778798a48ab0a602"
+    },
+    {
+      "path": "anims/ref_aim_snark_blend01.smd",
+      "bytes": 121982,
+      "sha256": "b2e9f60412fe8657437f7e5b84fcae1b8a811641ff80b33a9ccc5974fd1b23e7"
+    },
+    {
+      "path": "anims/ref_aim_snark_blend02.smd",
+      "bytes": 122045,
+      "sha256": "732400b7482a802a310127d357ae56cc6876911a97f130af29ba2e42e0566c30"
+    },
+    {
+      "path": "anims/ref_aim_sniper_blend01.smd",
+      "bytes": 121580,
+      "sha256": "b548e9046063d097c4824b60b3ff8953e6d3f27e344320791c8b7f87112e9bde"
+    },
+    {
+      "path": "anims/ref_aim_sniper_blend02.smd",
+      "bytes": 121580,
+      "sha256": "324244d32e535f8d2735219c45d7ae03a3b3644296178b7017968abbee3cb88f"
+    },
+    {
+      "path": "anims/ref_aim_sniperscope_blend01.smd",
+      "bytes": 121433,
+      "sha256": "1f06ca4bf1486e7ae365bc950770e233b51f2e648d9a5c7e194942cd9b7a5049"
+    },
+    {
+      "path": "anims/ref_aim_sniperscope_blend02.smd",
+      "bytes": 121454,
+      "sha256": "617a3cf79145fba4697ab829ff0d0cd93aa25204bd5bcf2d26b074421434c267"
+    },
+    {
+      "path": "anims/ref_aim_trip_blend01.smd",
+      "bytes": 121916,
+      "sha256": "0d84e3ec9c3ed9e030a898e0b7a6c18589c7205c339b96bb07272a38e02bdc09"
+    },
+    {
+      "path": "anims/ref_aim_trip_blend02.smd",
+      "bytes": 121937,
+      "sha256": "a3f07dd6ca7d1343f38c233acb46a228b68996e7861d4325199d895a2ef11c61"
+    },
+    {
+      "path": "anims/ref_aim_uzis_blend01.smd",
+      "bytes": 121811,
+      "sha256": "ea92bc65b101be9d5f175dd8d0b421788711bf96e9d509081801aa18e81a9961"
+    },
+    {
+      "path": "anims/ref_aim_uzis_blend02.smd",
+      "bytes": 121874,
+      "sha256": "df8dc42aed45f073f190b431a72d58e909e9c96833ac1c518a6b7ee4122470e6"
+    },
+    {
+      "path": "anims/ref_cock_gren_blend01.smd",
+      "bytes": 93393,
+      "sha256": "692225f0443f0bf99d905cbd78a6f1cf31f608ddb261c4b1bb90e3d569aa9866"
+    },
+    {
+      "path": "anims/ref_cock_gren_blend02.smd",
+      "bytes": 93433,
+      "sha256": "549e3c94361fd1e54bb432a2f0b9a802bbcc27ea5fe867fd88b8b949b40732aa"
+    },
+    {
+      "path": "anims/ref_cock_wrench_blend01.smd",
+      "bytes": 53318,
+      "sha256": "17f6e61f7338ca32e5cd6138abca64681f9418be1adb79700c2a71687218fa15"
+    },
+    {
+      "path": "anims/ref_cock_wrench_blend02.smd",
+      "bytes": 53331,
+      "sha256": "db32506fb0d6b78d42453981a890fa6e3761fdd01386bd91c213f010879ffc1e"
+    },
+    {
+      "path": "anims/ref_draw_bow_blend01.smd",
+      "bytes": 64830,
+      "sha256": "eb09798dbcd8f2620759a9d6026954ba8cc124da0d980f7b7eb9b7abab89a4ff"
+    },
+    {
+      "path": "anims/ref_draw_bow_blend02.smd",
+      "bytes": 64830,
+      "sha256": "613c3987013e74e809f244418d1f3ef42f4bcf6c51cc37a59150b5b2af93e0c4"
+    },
+    {
+      "path": "anims/ref_draw_crowbar_blend01.smd",
+      "bytes": 47697,
+      "sha256": "39ce91435b927d790e0250558c544ccb945b0418b9157ee2b1d45ed53889e27e"
+    },
+    {
+      "path": "anims/ref_draw_crowbar_blend02.smd",
+      "bytes": 47724,
+      "sha256": "a0ec1eff1dd622582ddc1355c85c24c25718b915be3eea52b00d142a0d96dc26"
+    },
+    {
+      "path": "anims/ref_draw_egon_blend01.smd",
+      "bytes": 64981,
+      "sha256": "655d57abe9b7e5d857f50c714143127bc8f342a72e2068bfca014b47c2be68fd"
+    },
+    {
+      "path": "anims/ref_draw_egon_blend02.smd",
+      "bytes": 64983,
+      "sha256": "626ea73eb61340e2a3534598fb3d5ce06fbb98d091a4a7ccefdc1e1f26a324bc"
+    },
+    {
+      "path": "anims/ref_draw_gauss_blend01.smd",
+      "bytes": 64645,
+      "sha256": "77ab5a393aafbbcb8be4fc4b17a63179245e0a0e13062cc80a88798aab07c9d5"
+    },
+    {
+      "path": "anims/ref_draw_gauss_blend02.smd",
+      "bytes": 64643,
+      "sha256": "c6688dfeaa565b65bea8309752bccf5a515bc6e92690b3aca82af1adc7f33a7b"
+    },
+    {
+      "path": "anims/ref_draw_gren_blend01.smd",
+      "bytes": 47780,
+      "sha256": "253314a9993d9e6a4a3d2bf13069dd381db67612e55806772112493c7a81a176"
+    },
+    {
+      "path": "anims/ref_draw_gren_blend02.smd",
+      "bytes": 47792,
+      "sha256": "ac6b1aa83f816226a9191e180eb0f7fe7c5510a6c59a5c2edf070a52b3d628c7"
+    },
+    {
+      "path": "anims/ref_draw_hive_blend01.smd",
+      "bytes": 41925,
+      "sha256": "c1af5fc20df490b4508f930745eecc026d596de6ee93f2ec6fb739fe9b1a7cd5"
+    },
+    {
+      "path": "anims/ref_draw_hive_blend02.smd",
+      "bytes": 41948,
+      "sha256": "d174acd91ac254eb824bf2e0b6709e0d507928b2a26c9a1e321e97ba749d3a48"
+    },
+    {
+      "path": "anims/ref_draw_m16_blend01.smd",
+      "bytes": 121433,
+      "sha256": "70e47e6aa087e917409b5421b49453598c4c8a9de2b1ed839fb16900e708a171"
+    },
+    {
+      "path": "anims/ref_draw_m16_blend02.smd",
+      "bytes": 121445,
+      "sha256": "635d0c0545299f6a56dcfdfff87a4b3d11a5023174c18c9e8f057b4c6a4545f2"
+    },
+    {
+      "path": "anims/ref_draw_minigun_blend01.smd",
+      "bytes": 93244,
+      "sha256": "28d13b66c334a57ca5acc7cdc3a7948b8610ebda2a6c76ac26c14d82545e6e38"
+    },
+    {
+      "path": "anims/ref_draw_minigun_blend02.smd",
+      "bytes": 93237,
+      "sha256": "2727278b1a7537f61d1741f784362f892718767dc2b7c66b35a3a9e797a5749a"
+    },
+    {
+      "path": "anims/ref_draw_mp5_blend01.smd",
+      "bytes": 64747,
+      "sha256": "7302c99c4cd36c8c39a9bce3038078513b7f3539c3b6506318419d7177ca430b"
+    },
+    {
+      "path": "anims/ref_draw_mp5_blend02.smd",
+      "bytes": 64753,
+      "sha256": "f92d3394e71e71e1c894377fe273fa19e425a82b529537f45ee439b13186e2c5"
+    },
+    {
+      "path": "anims/ref_draw_onehanded_blend01.smd",
+      "bytes": 70442,
+      "sha256": "f7646ab01ed46a86a4b13b8072602ca9d10ff79d48c3c2fc68ca9b9daa0e4587"
+    },
+    {
+      "path": "anims/ref_draw_onehanded_blend02.smd",
+      "bytes": 70458,
+      "sha256": "b5729784c4f7d1fe3971a4a8f92931ed3013cb95d07c98a8f32d7508b53234f7"
+    },
+    {
+      "path": "anims/ref_draw_python_blend01.smd",
+      "bytes": 70505,
+      "sha256": "b84721af1954a3f97c5a2fc0b1b433da18de18337c6e4f23ca251ed760d433aa"
+    },
+    {
+      "path": "anims/ref_draw_python_blend02.smd",
+      "bytes": 70510,
+      "sha256": "1c760c782c25e5cfd63bd0413c4ea10472d14f442b67bb9c9c94a3bd3229b35f"
+    },
+    {
+      "path": "anims/ref_draw_rpg_blend01.smd",
+      "bytes": 64823,
+      "sha256": "c63a8203c9cd5671547ca2ffe80c1c5e0226ac71964edb9f33944db0298e5a46"
+    },
+    {
+      "path": "anims/ref_draw_rpg_blend02.smd",
+      "bytes": 64821,
+      "sha256": "142abef2a3ea7d8c0c8b6f1788afeab803ab2fac814373407c96e446a1cf410e"
+    },
+    {
+      "path": "anims/ref_draw_saw_blend01.smd",
+      "bytes": 121518,
+      "sha256": "33794be20ab1800b19119ca5a2ae3f2aec88705e22dd762472fa1ec0817fa79c"
+    },
+    {
+      "path": "anims/ref_draw_saw_blend02.smd",
+      "bytes": 121545,
+      "sha256": "a2bf7b382a034eebbb20fa8036011d21a4965c57e61f8555ac65c421acff4ff6"
+    },
+    {
+      "path": "anims/ref_draw_shotgun_blend01.smd",
+      "bytes": 64915,
+      "sha256": "e0a3354ce7f8cd738bb1cd9219c9fdfe0f4ff2509867792c9ea33935fa61a5cf"
+    },
+    {
+      "path": "anims/ref_draw_shotgun_blend02.smd",
+      "bytes": 64903,
+      "sha256": "3f14a79ae974d69bf6a2f7a72118c534c8021077aa302354e91604fce5dee3b0"
+    },
+    {
+      "path": "anims/ref_draw_snark_blend01.smd",
+      "bytes": 65026,
+      "sha256": "0d9c6ce7f2ca5e3005d7c10f4a1f19031818c2879a06a5196f77d8c81abc997d"
+    },
+    {
+      "path": "anims/ref_draw_snark_blend02.smd",
+      "bytes": 65032,
+      "sha256": "3c71eabc851a80db22309ac7a65baae3975888e19cdcbf3e84145c1b962d6bd5"
+    },
+    {
+      "path": "anims/ref_draw_sniper_blend01.smd",
+      "bytes": 64742,
+      "sha256": "76bfbf47a1a230b3d1783d44006cf0c2f810b84fdce170b2ddae420f2ebcfe3d"
+    },
+    {
+      "path": "anims/ref_draw_sniper_blend02.smd",
+      "bytes": 64726,
+      "sha256": "a83f86fd80ff6c793d2346507379e5df9a2e522f1ed979b90cd8cb4c62bf20b3"
+    },
+    {
+      "path": "anims/ref_draw_trip_blend01.smd",
+      "bytes": 70521,
+      "sha256": "95d2f0d337fb679db6c6884c1da921184f49171fae19f83e2684e3d0ea6d7ca8"
+    },
+    {
+      "path": "anims/ref_draw_trip_blend02.smd",
+      "bytes": 70524,
+      "sha256": "25231adfa2197b4c28e906e8c3236488834816e80414d45bcfca54e031d3f7ec"
+    },
+    {
+      "path": "anims/ref_draw_uzis_blend01.smd",
+      "bytes": 64897,
+      "sha256": "ad2237a92cc8ad0f480914f258aef8d0a6516b9e7aacff022042892534c32e99"
+    },
+    {
+      "path": "anims/ref_draw_uzis_blend02.smd",
+      "bytes": 64905,
+      "sha256": "4d6593c35fa9cdd5d9e52ecd0fa1e643bf55984740bf4e340166279b665a40e1"
+    },
+    {
+      "path": "anims/ref_draw_uzis_left_blend01.smd",
+      "bytes": 133293,
+      "sha256": "a60f8ccf5068f780bbd3b04e0362e8b763cac1ba3930344f05c1b228223590a5"
+    },
+    {
+      "path": "anims/ref_draw_uzis_left_blend02.smd",
+      "bytes": 133315,
+      "sha256": "fa58e45af8652b2a435fa970a75abfac478ca59e194eba349d6fcbeae10789a5"
+    },
+    {
+      "path": "anims/ref_hold_gren_blend01.smd",
+      "bytes": 93396,
+      "sha256": "531f17eb6393f2bca22e9d9f55fa7b5b32761c39b61f328f455a2b5bf7671020"
+    },
+    {
+      "path": "anims/ref_hold_gren_blend02.smd",
+      "bytes": 93492,
+      "sha256": "744cdc24cece5013fca1883e5df343e15605bddf6624f2d5ca2d7fb744d5e7fd"
+    },
+    {
+      "path": "anims/ref_hold_wrench_blend01.smd",
+      "bytes": 13506,
+      "sha256": "588461c735a0243292e34d2a726099340de5402345c1845a54f590026314a53e"
+    },
+    {
+      "path": "anims/ref_hold_wrench_blend02.smd",
+      "bytes": 13508,
+      "sha256": "f34a39da70a3da5f8e67b2fafe822e3fc28b1732d275267a1b06a0cdd59d1ff9"
+    },
+    {
+      "path": "anims/ref_reload_bow_blend01.smd",
+      "bytes": 264094,
+      "sha256": "861763b99f02b7aab5821005f13ab7c9430de20b6c099f2aef59c272478f18fd"
+    },
+    {
+      "path": "anims/ref_reload_bow_blend02.smd",
+      "bytes": 264097,
+      "sha256": "4006ac7a7786d1a17176df6188c0bdb727bbf6c1c2526a00e0cda553e596448c"
+    },
+    {
+      "path": "anims/ref_reload_m16_blend01.smd",
+      "bytes": 575927,
+      "sha256": "6299694a845c171c7bdf900e2ac76f0716090ce46e61cecdde47ae13143ee313"
+    },
+    {
+      "path": "anims/ref_reload_m16_blend02.smd",
+      "bytes": 575936,
+      "sha256": "6a19e6f4e894f83399bb85f82d1d42b233c9fcf806d3047795426c70dc9fe7e9"
+    },
+    {
+      "path": "anims/ref_reload_m203_blend01.smd",
+      "bytes": 376937,
+      "sha256": "f04dffb9bb477b1ed276ca0cec7e21007f8dadef407f7be66b6861e791b7e2df"
+    },
+    {
+      "path": "anims/ref_reload_m203_blend02.smd",
+      "bytes": 376955,
+      "sha256": "580491defb4312d65dcd1bde7ef08136843844d702f552405518c3a39ea1b0ba"
+    },
+    {
+      "path": "anims/ref_reload_mp5_blend01.smd",
+      "bytes": 138795,
+      "sha256": "cce12e6701d115db202ccf7675a55b27630615407b37aa35c96a9c441cfed1b9"
+    },
+    {
+      "path": "anims/ref_reload_mp5_blend02.smd",
+      "bytes": 138802,
+      "sha256": "16083b6d29212f3422ec567c7040b346bad81572c86253e4db6e6b9b6af8812e"
+    },
+    {
+      "path": "anims/ref_reload_onehanded_blend01.smd",
+      "bytes": 178477,
+      "sha256": "28614c586ed810dcc9aebda5f4ac45136b5e50116f7e6494d0ef6459bd4ef75d"
+    },
+    {
+      "path": "anims/ref_reload_onehanded_blend02.smd",
+      "bytes": 178496,
+      "sha256": "db31848b04f3a0623e38f3d9414fcb86078fae0f6edb6db39d10bd1b7b0dc120"
+    },
+    {
+      "path": "anims/ref_reload_python_blend01.smd",
+      "bytes": 269890,
+      "sha256": "0870b7e1aca4de430dc4f322089f7f005991816f9d2ee738c5558187fd1adfdb"
+    },
+    {
+      "path": "anims/ref_reload_python_blend02.smd",
+      "bytes": 269891,
+      "sha256": "7761b8a0b768633dffb57d097bb0051187bb449243dd0c7d9ce88d3a1f0adfd8"
+    },
+    {
+      "path": "anims/ref_reload_rpg_blend01.smd",
+      "bytes": 138837,
+      "sha256": "43ac16922f45022e19e3959cfe686bb3a4c6ce1f9bf51806d57262bb2e0f556d"
+    },
+    {
+      "path": "anims/ref_reload_rpg_blend02.smd",
+      "bytes": 138834,
+      "sha256": "0f6eda3d46ff2ed25932ecccd367d9d81862f425e366ae2ef696b04a42bfe386"
+    },
+    {
+      "path": "anims/ref_reload_saw_blend01.smd",
+      "bytes": 1145648,
+      "sha256": "6d0ef9d55b57a661ead05f39991e5e72ce73e962742865b1eec4a42080960cbf"
+    },
+    {
+      "path": "anims/ref_reload_saw_blend02.smd",
+      "bytes": 1145722,
+      "sha256": "ae930a9205897231366d69d96053523d249be813c105f9553deea2299aae2c67"
+    },
+    {
+      "path": "anims/ref_reload_shotgun_blend01.smd",
+      "bytes": 133100,
+      "sha256": "62b45a5141b68d7325e71dc9c96c46efe455a624ace8a6dbfc3f376e304d4d85"
+    },
+    {
+      "path": "anims/ref_reload_shotgun_blend02.smd",
+      "bytes": 133100,
+      "sha256": "62b45a5141b68d7325e71dc9c96c46efe455a624ace8a6dbfc3f376e304d4d85"
+    },
+    {
+      "path": "anims/ref_reload_sniper_blend01.smd",
+      "bytes": 263746,
+      "sha256": "9430b6d91ed4c4f7d34ee560b172da611d042deb7689abf2f348a10109fc7bea"
+    },
+    {
+      "path": "anims/ref_reload_sniper_blend02.smd",
+      "bytes": 263757,
+      "sha256": "deb9ec8cdb2eed57155a991dfb869385d83095de70e6bec2e8fbd338b9edf957"
+    },
+    {
+      "path": "anims/ref_reload_uzis_left_blend01.smd",
+      "bytes": 201807,
+      "sha256": "1363b5f424b1758221ad3fddf989afe11e66dac57662b519016f65dbcad57e3d"
+    },
+    {
+      "path": "anims/ref_reload_uzis_left_blend02.smd",
+      "bytes": 201831,
+      "sha256": "cbf5d5aaaf2345efba5b8f2153d2f7ed07a30b1ab1869ebfbacdcf81f7b2c504"
+    },
+    {
+      "path": "anims/ref_reload_uzis_right_blend01.smd",
+      "bytes": 201585,
+      "sha256": "1acf83fba7318be199b44cc076c1825896135accbab1dbcabbe75aac81327585"
+    },
+    {
+      "path": "anims/ref_reload_uzis_right_blend02.smd",
+      "bytes": 201604,
+      "sha256": "19ac1a26ef8f73cb2db4d53654911e2861e18f87564744db6912bbb36d178416"
+    },
+    {
+      "path": "anims/ref_shoot_bow_blend01.smd",
+      "bytes": 41972,
+      "sha256": "269513e5a5746e5d7bc4bb15da59fa89669bfcced7bf0ef732ddd617bd4099fd"
+    },
+    {
+      "path": "anims/ref_shoot_bow_blend02.smd",
+      "bytes": 41975,
+      "sha256": "ba11fd4613d05b90cc9d6abd480b3a4e98c82cfa07ea85de101648e6dc94ab5e"
+    },
+    {
+      "path": "anims/ref_shoot_bowscope_blend01.smd",
+      "bytes": 41958,
+      "sha256": "7b3b225d3e6c1d72e392940e54feb79ead5858611c47c66562a54d039d035688"
+    },
+    {
+      "path": "anims/ref_shoot_bowscope_blend02.smd",
+      "bytes": 41965,
+      "sha256": "02733daa350851ba7ee3ba027da810d1a437df72744ea4540c8b84c0a2de7c65"
+    },
+    {
+      "path": "anims/ref_shoot_crowbar_blend01.smd",
+      "bytes": 76156,
+      "sha256": "825306571ad1246fe80d9a9c1b40eac5f4aed4ba5fb29ab3bff83d93c1b41a50"
+    },
+    {
+      "path": "anims/ref_shoot_crowbar_blend02.smd",
+      "bytes": 76185,
+      "sha256": "56e04197f921b230cc080efd0837fc494198646d8b3b66c45ff1963f9305eca6"
+    },
+    {
+      "path": "anims/ref_shoot_egon_blend01.smd",
+      "bytes": 13566,
+      "sha256": "ea13dc2a596af4efa4a45c8cb5417735f0cfeecd070cecaa00786f5296dc619c"
+    },
+    {
+      "path": "anims/ref_shoot_egon_blend02.smd",
+      "bytes": 13566,
+      "sha256": "9db9690a2e5e1ebf55583793ae62b74c2b6fe68f2c711139031a002eeeefee2e"
+    },
+    {
+      "path": "anims/ref_shoot_gauss_blend01.smd",
+      "bytes": 64668,
+      "sha256": "2a71d4b4bd62aa3650616bad25bbd2396992e55ce4789a1d6964e0cc30661c26"
+    },
+    {
+      "path": "anims/ref_shoot_gauss_blend02.smd",
+      "bytes": 64666,
+      "sha256": "ba52b081b4ccce17dd42c251c64a37227cf78649be645aa802fe15d808ffe751"
+    },
+    {
+      "path": "anims/ref_shoot_gren_blend01.smd",
+      "bytes": 110102,
+      "sha256": "076523948572ce42968c627cb58e10338d531b21d8b1094c149e31050137e9c6"
+    },
+    {
+      "path": "anims/ref_shoot_gren_blend02.smd",
+      "bytes": 110219,
+      "sha256": "a74b3cb93b9fec88560936c75455df319f18effdb511ef3e148b34cd20526527"
+    },
+    {
+      "path": "anims/ref_shoot_hive_blend01.smd",
+      "bytes": 41916,
+      "sha256": "be8a81495be7bef57d1f4c408ad700067481fb4131e5fc720b5a286a7f9ccd2b"
+    },
+    {
+      "path": "anims/ref_shoot_hive_blend02.smd",
+      "bytes": 41944,
+      "sha256": "5885b375bc0a9997dad994947fcad687dd074c5267386710b01ec145d30ec9a6"
+    },
+    {
+      "path": "anims/ref_shoot_m16_blend01.smd",
+      "bytes": 47576,
+      "sha256": "4ac1e99b2d53851f9e017e77e4eafb1344f6a434a59c968e124851ee3df17b85"
+    },
+    {
+      "path": "anims/ref_shoot_m16_blend02.smd",
+      "bytes": 47584,
+      "sha256": "004b83f4b67009001180eee905f3674917dd0cd75395d4feeec1345e52e8dea1"
+    },
+    {
+      "path": "anims/ref_shoot_m203_blend01.smd",
+      "bytes": 36201,
+      "sha256": "76d176d0a3e517659e73d8fbf9aba6484b26a037b78d797e070b02c59d5aeb11"
+    },
+    {
+      "path": "anims/ref_shoot_m203_blend02.smd",
+      "bytes": 36207,
+      "sha256": "1cc24ec50ecf8e8a88af5f0666190a77931eb6536eaf2506b6b99cff04e0047d"
+    },
+    {
+      "path": "anims/ref_shoot_mp5_blend01.smd",
+      "bytes": 47679,
+      "sha256": "2499921db433b038f66a8776b3da6639f2b3cff83598cd1ad352e438a69117ab"
+    },
+    {
+      "path": "anims/ref_shoot_mp5_blend02.smd",
+      "bytes": 47686,
+      "sha256": "9536ee743b1b5f25a165cb9e37ac7c66590c021f47097ad2ee62ce6fa84d9303"
+    },
+    {
+      "path": "anims/ref_shoot_onehanded_blend01.smd",
+      "bytes": 47615,
+      "sha256": "881f66b063f97ff789575e5ba07c54cd13305196357ec41a08e645a62b1e611b"
+    },
+    {
+      "path": "anims/ref_shoot_onehanded_blend02.smd",
+      "bytes": 47640,
+      "sha256": "b55ff0a9947c359d636ba2f894f1e52bcb0b70dd4f479fa689cd0fa47aa467bf"
+    },
+    {
+      "path": "anims/ref_shoot_python_blend01.smd",
+      "bytes": 59099,
+      "sha256": "884d1cc0ee0a8695cee6ecaf6b463eb1d14d7124c2cce7c88dad0be1f2f163df"
+    },
+    {
+      "path": "anims/ref_shoot_python_blend02.smd",
+      "bytes": 59109,
+      "sha256": "cbc82e5b88d445536a7cf188cf487ab2d6ab872069c49580b6e0e22f90c0e049"
+    },
+    {
+      "path": "anims/ref_shoot_rpg_blend01.smd",
+      "bytes": 64782,
+      "sha256": "76a6c06b0f49df39db8a59d04cf0d580ec14e7271fc44dac879a4b38806df089"
+    },
+    {
+      "path": "anims/ref_shoot_rpg_blend02.smd",
+      "bytes": 64782,
+      "sha256": "bb13aa441ce367abaf3181016acee5d02e2a85ced356bd2ee8f8f1bedf4f15aa"
+    },
+    {
+      "path": "anims/ref_shoot_saw_blend01.smd",
+      "bytes": 30577,
+      "sha256": "182807a2403325dc4be6a08793a63b4a139dbabeadc6102fa32bc0cad9d799b6"
+    },
+    {
+      "path": "anims/ref_shoot_saw_blend02.smd",
+      "bytes": 30587,
+      "sha256": "1c02c40fea4a130c8823c8a9037a1cd8cd42fe1cadd8f8786ea40f1182f89bdd"
+    },
+    {
+      "path": "anims/ref_shoot_shotgun_blend01.smd",
+      "bytes": 98905,
+      "sha256": "b440b0b5ee0cda70762b2f6848565949a46121229efb2b2be6b96375ba978957"
+    },
+    {
+      "path": "anims/ref_shoot_shotgun_blend02.smd",
+      "bytes": 98907,
+      "sha256": "158c37155ed69dd2a06e125344b9978bad214397d445e2c70b15f6f9e073676d"
+    },
+    {
+      "path": "anims/ref_shoot_snark_blend01.smd",
+      "bytes": 64898,
+      "sha256": "8ab4a69968c7b9efad8191962cf5fd14ae779137fae2d0dbf0d48ff04b462358"
+    },
+    {
+      "path": "anims/ref_shoot_snark_blend02.smd",
+      "bytes": 64912,
+      "sha256": "c624448002bc05fc5d07c724af0c16f589b4aa76290177b8629dab6ca410289b"
+    },
+    {
+      "path": "anims/ref_shoot_sniper_blend01.smd",
+      "bytes": 41951,
+      "sha256": "1d1f90306cbfae66a20f5c2ac3423bc24484f3b0295e8ea1f47fd15c217efd22"
+    },
+    {
+      "path": "anims/ref_shoot_sniper_blend02.smd",
+      "bytes": 41951,
+      "sha256": "ad44bb8497df8e38a3e59463fe6a26a4829da7848cd0dcaf063d7788c71f1f25"
+    },
+    {
+      "path": "anims/ref_shoot_sniperscope_blend01.smd",
+      "bytes": 41902,
+      "sha256": "2fe5179b2d51f9a27ea72d9b3f8ffcffe6fa541bfdfcf8258aacd1e8c7d5c9c2"
+    },
+    {
+      "path": "anims/ref_shoot_sniperscope_blend02.smd",
+      "bytes": 41909,
+      "sha256": "e980f09579504a35a6a155c05c86d6d7d53fea3d35b94f0924dbd3ad8a5f5fa0"
+    },
+    {
+      "path": "anims/ref_shoot_trip_blend01.smd",
+      "bytes": 81993,
+      "sha256": "9d2cc433e90719f733f19c5041a01af76bf05cae6ea9b4f75e9d3b93652d282f"
+    },
+    {
+      "path": "anims/ref_shoot_trip_blend02.smd",
+      "bytes": 81986,
+      "sha256": "85aa8f717d7638e1612fb23f6f2bf7b2cf2e5eccf44010b44622bb5121088c5d"
+    },
+    {
+      "path": "anims/ref_shoot_uzis_both_blend01.smd",
+      "bytes": 42042,
+      "sha256": "c1cd6cf7f00e539a81a8c530c93b8f8744618a342c22d0e5d442fbf517767485"
+    },
+    {
+      "path": "anims/ref_shoot_uzis_both_blend02.smd",
+      "bytes": 42049,
+      "sha256": "ba3bdae695457fc559a3552131452cc1e879b6017363cf7e6e43a27255db64f4"
+    },
+    {
+      "path": "anims/ref_shoot_uzis_left_blend01.smd",
+      "bytes": 42042,
+      "sha256": "19f7e3d77e0e5e52f8748aa61ec418d9a50135bd6d471266acf3a0e1de430eb2"
+    },
+    {
+      "path": "anims/ref_shoot_uzis_left_blend02.smd",
+      "bytes": 42049,
+      "sha256": "98a79023c4911d226356ca9947f4d6b55da979901d71fad620b4ad4451d4ed86"
+    },
+    {
+      "path": "anims/ref_shoot_uzis_right_blend01.smd",
+      "bytes": 42042,
+      "sha256": "ce8616283626f3d58b5aaccc7490e9b6609daec600e9619529d69ceef77648e5"
+    },
+    {
+      "path": "anims/ref_shoot_uzis_right_blend02.smd",
+      "bytes": 42049,
+      "sha256": "8ab2e41e77ef19f959a7ed583bf27c779caa68e894dfc08bae48d81bbf3b6ad6"
+    },
+    {
+      "path": "anims/ref_shoot_wrench_blend01.smd",
+      "bytes": 178420,
+      "sha256": "81bb7e438f9b7fdc9c63d24ad8748a8fc6f3f9213599c43952492d8350a2c091"
+    },
+    {
+      "path": "anims/ref_shoot_wrench_blend02.smd",
+      "bytes": 178486,
+      "sha256": "99db730275c5766dd355752c63ef9f89e686ff67d8dd1833d20e05ac52d4a3d6"
+    },
+    {
+      "path": "anims/run2_blend01.smd",
+      "bytes": 110587,
+      "sha256": "a60b260d768fedc9d15243f3cc4c84f8369717006ce922b58dda0a85d727a406"
+    },
+    {
+      "path": "anims/run2_blend02.smd",
+      "bytes": 110625,
+      "sha256": "5798a02c83941417d0cbcc2ea4841ed2325bd391eb0c0ffc6485fa31fffa2984"
+    },
+    {
+      "path": "anims/standing_greeting.smd",
+      "bytes": 604449,
+      "sha256": "f19f7876b2e02f1954258b18c6af2f8cd1949c5a59399db32aa9f2540ba33b85"
+    },
+    {
+      "path": "anims/swim.smd",
+      "bytes": 269563,
+      "sha256": "0233ff36b63bdbf7566383f17a770307a1c5d7a4c48d22683e5794c52f4b913e"
+    },
+    {
+      "path": "anims/treadwater.smd",
+      "bytes": 235991,
+      "sha256": "6cf9e11b3153261a32c947a2007db9dacb47baa7691fbd47610f1b290ceeef38"
+    },
+    {
+      "path": "anims/walk_blend01.smd",
+      "bytes": 178671,
+      "sha256": "2028f1e092ac030af18f3ccfe48fbc6f60f31a03bb3a61608650f57bdbf9aaa2"
+    },
+    {
+      "path": "anims/walk_blend02.smd",
+      "bytes": 178708,
+      "sha256": "ca35f27659055a5329feff5eb0eeb25825a9c1bc6d0958c67ceac33d07ec12f5"
+    },
+    {
+      "path": "anims/waving.smd",
+      "bytes": 553316,
+      "sha256": "fb420f6049be03e14e8500b6ce8fcfbf729acd9c619243abd1ffaadd6b173db3"
+    },
+    {
+      "path": "anims/yorha_type_e_blend01.smd",
+      "bytes": 13536,
+      "sha256": "97e0d75739f75cb2ba9f0eb5226ae3c97a06304b67bc17366f95cfa2e52b671d"
+    },
+    {
+      "path": "anims/yorha_type_e_blend02.smd",
+      "bytes": 13536,
+      "sha256": "97e0d75739f75cb2ba9f0eb5226ae3c97a06304b67bc17366f95cfa2e52b671d"
+    },
+    {
+      "path": "build/windows_auto/reports/source-preflight-linux.json",
+      "bytes": 1225,
+      "sha256": "955b04e5c5fd45671b358961c1001c36586c9d67a21dc4d3917e831d050356eb"
+    },
+    {
+      "path": "compile_yorha_auto.bat",
+      "bytes": 176,
+      "sha256": "22501da695acef4a8b982f0bffd5f40fbbd5e0aa434f600ba2287b62b58a58d0"
+    },
+    {
+      "path": "custom_player_windows.qc",
+      "bytes": 29617,
+      "sha256": "716a29d36e2d2db695b197db8a23899780d16ef4f010380a1137be1c0566be6c"
+    },
+    {
+      "path": "custom_player_windows_1024_fallback.qc",
+      "bytes": 29702,
+      "sha256": "a9606f92dc39e3a79bca555f8d4dd25b6f0eb1f0809936e5522cd399092f9966"
+    },
+    {
+      "path": "mesh/custom_player_highpoly.smd",
+      "bytes": 25144665,
+      "sha256": "b327cf94b840bbfdac3a7041c8c63eeb3473cb4ba34b3fee2cab77bf9e70ad9b"
+    },
+    {
+      "path": "mesh/custom_player_highpoly_windows.smd",
+      "bytes": 26344641,
+      "sha256": "b3170a7c82a66ef9a2acb89f411e884b46457fe8dc8ad1d67c0cca2beab81c47"
+    },
+    {
+      "path": "textures/custom_player.bmp",
+      "bytes": 4195382,
+      "sha256": "2fb942a8644bc038eefff763bc5ef62e1adb04d87356f35d94cb804df61b1c75"
+    },
+    {
+      "path": "textures_windows_1024/custom_player.bmp",
+      "bytes": 1049654,
+      "sha256": "e73c271be4d23a45b186123ed6876083c62202378f8e9183f6e66a9c2a896fdb"
+    },
+    {
+      "path": "tools/windows/Invoke-YorhaBuild.ps1",
+      "bytes": 29200,
+      "sha256": "f69839d0c8664b5c5fa1a98b6337f167e88a0b1753b9bdd0a9b213fdd74b8bbb"
+    },
+    {
+      "path": "tools/windows/__pycache__/validate_yorha_auto_workflow.cpython-313.pyc",
+      "bytes": 43789,
+      "sha256": "6504f53a914b178ed20596faaf068a56094cf275fdb33eb370f3370328a243e7"
+    },
+    {
+      "path": "tools/windows/compiler_probe/body.smd",
+      "bytes": 346530,
+      "sha256": "a3f9de096eda646289a61c081707f8cf00e200da68b3ac6868059740f5a0c3cc"
+    },
+    {
+      "path": "tools/windows/compiler_probe/idle.smd",
+      "bytes": 66,
+      "sha256": "6361d1ead38c3b72b0b6b5f3fb63f4b788a6156f5549c45b41ad82385bd549f3"
+    },
+    {
+      "path": "tools/windows/compiler_probe/probe.bmp",
+      "bytes": 1334,
+      "sha256": "5adeebd6ad32a94bd3c99ec81fb048be1e16b46dcb27d1068c9de248ddffe820"
+    },
+    {
+      "path": "tools/windows/compiler_probe/probe.qc",
+      "bytes": 138,
+      "sha256": "989e5efe8f6cc4ee6163a45e2d857b73f31da41814a0bfeb2e970fe05d00a531"
+    },
+    {
+      "path": "tools/windows/test_yorha_auto_workflow.py",
+      "bytes": 16401,
+      "sha256": "df76163dbf417408977d43ed89fb128c40261e5db82a8cb711eabb03d083a176"
+    },
+    {
+      "path": "tools/windows/validate_yorha_auto_workflow.py",
+      "bytes": 31194,
+      "sha256": "02bd4b812587f18086747bbce61e6afce33942958949be4f32b0cc4074b864cf"
+    },
+    {
+      "path": "validation/GITHUB_ACTIONS_YAML_PARSE.txt",
+      "bytes": 11,
+      "sha256": "8dac7d8462e0a654d7cd6ec9ade321beb55e93bf06985d4c0d392b58b76a72a3"
+    },
+    {
+      "path": "validation/LOCAL_STATIC_VERIFICATION_V41.json",
+      "bytes": 1939,
+      "sha256": "a03c30ab260070f27c7bcb09cd8fdc9d15098210b4ca35cc3df6b28eeebf9dc2"
+    },
+    {
+      "path": "validation/REGRESSION_TESTS_V41.txt",
+      "bytes": 2061,
+      "sha256": "2bac9eb189674358cd5cbf1655cb291a3041d60df92a4c9820adb840dcfee1a2"
+    },
+    {
+      "path": "validation/REGRESSION_TESTS_V43.txt",
+      "bytes": 2731,
+      "sha256": "c2244201de9627e28fcb6491c417af1a66f072c28943947be45abeae72b49828"
+    },
+    {
+      "path": "validation/SOURCE_PREFLIGHT_V41.log",
+      "bytes": 1163,
+      "sha256": "c81fdf7f1f4948daac7788d98eba92c580bead77f777f5d80801980cdea44906"
+    },
+    {
+      "path": "validation/source-preflight-v41.json",
+      "bytes": 1163,
+      "sha256": "c81fdf7f1f4948daac7788d98eba92c580bead77f777f5d80801980cdea44906"
+    },
+    {
+      "path": "validation/source-preflight-v43.json",
+      "bytes": 1127,
+      "sha256": "0e7c1e0a93453acda8305961d86652e2624a473c7bb1150a13c9a2753491e624"
+    }
+  ]
+}

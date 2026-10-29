@@ -1,0 +1,79 @@
+name: Yorha Windows StudioMDL V2 Auto-Build
+
+on:
+  workflow_dispatch:
+    inputs:
+      force_compiler_update:
+        description: Download and verify a fresh official FunnkyHD StudioMDL V2.0 archive
+        type: boolean
+        required: false
+        default: false
+  push:
+    paths:
+      - 'custom_player_windows.qc'
+      - 'mesh/custom_player_highpoly.smd'
+      - 'mesh/custom_player_highpoly_windows.smd'
+      - 'anims/**'
+      - 'textures_windows_1024/**'
+      - 'tools/windows/**'
+      - 'compile_yorha_auto.bat'
+      - '.github/workflows/yorha-windows-auto-build.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  source-audit:
+    name: Source audit and regression tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run workflow/MDL-validator regression tests
+        run: python tools/windows/test_yorha_auto_workflow.py
+      - name: Validate all source mesh, hierarchy, UV, texture, QC, and animation paths
+        run: >-
+          python tools/windows/validate_yorha_auto_workflow.py
+          --root . --mode sources
+          --report build/windows_auto/reports/source-preflight-linux.json
+      - name: Upload source audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: yorha-source-audit
+          path: build/windows_auto/reports/source-preflight-linux.json
+          if-no-files-found: warn
+          retention-days: 14
+
+  windows-build:
+    name: Fetch, probe, compile, and validate MDL
+    needs: source-audit
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run automatic native Windows build
+        shell: powershell
+        run: |
+          $parameters = @('-NoLogo', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', 'tools/windows/Invoke-YorhaBuild.ps1')
+          if ('${{ inputs.force_compiler_update }}' -eq 'true') { $parameters += '-ForceCompilerUpdate' }
+          & powershell.exe @parameters
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Upload MDL and complete build evidence (never upload the licensed compiler binary)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: yorha-windows-mdl-and-validation
+          path: |
+            models/player/yorha/yorha.mdl
+            models/player/yorha/SHA256SUMS.txt
+            build/windows_auto/reports/**
+            build/windows_auto/logs/**
+          if-no-files-found: warn
+          retention-days: 14

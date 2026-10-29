@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "package_version": "V43",
+  "generated_at_utc": "2026-10-29T17:19:26.051565+00:00",
+  "status": "PACKAGE_REGRESSION_PASS__TARGET_REPO_PALADINI_MAKER_MDL_WORKFLOW__GITHUB_PUSH_AND_NATIVE_WINDOWS_BUILD_PENDING",
+  "source_preflight": {
+    "status": "PASS_SOURCE_ASSETS",
+    "bones": 90,
+    "triangles": 99998,
+    "sequences": 208,
+    "unique_animation_smd_references": 393,
+    "missing_animation_smd_references": 0,
+    "animation_skeleton_mismatches": 0,
+    "hitboxes": 35,
+    "controllers": 5,
+    "texture": {
+      "path": "/mnt/data/work_yorha_v42/Yorha_Windows_AutoBuild_V42/textures_windows_1024/custom_player.bmp",
+      "width": 1024,
+      "height": 1024,
+      "bits_per_pixel": 8,
+      "palette_entries": 256,
+      "bytes": 1049654,
+      "sha256": "e73c271be4d23a45b186123ed6876083c62202378f8e9183f6e66a9c2a896fdb"
+    }
+  },
+  "checks_executed_in_this_environment": {
+    "workflow_regression_tests": "PASS 17/17",
+    "source_qc_mesh_uv_hierarchy_texture_preflight": "PASS_SOURCE_ASSETS",
+    "deployment_powershell_delimiter_and_string_state_check": "PASS_STATIC_ONLY",
+    "workflow_yaml_parse": "PASS",
+    "package_file_manifest": "GENERATED",
+    "archive_crc_and_sha256": "CHECKED_EXTERNALLY_BY_PACKAGE_VERIFICATION"
+  },
+  "checks_not_executed_or_pending": {
+    "remote_github_repository_creation": "NOT_REQUIRED: existing empty repository paladini-maker/mdl-workflow verified through connector",
+    "git_push_and_github_actions_runner": "PENDING_NATIVE_WINDOWS_USER_AUTHENTICATION",
+    "official_funnkyhd_archive_download": "PENDING_NATIVE_WINDOWS_OR_GITHUB_ACTIONS",
+    "official_compiler_splitmesh_functional_probe": "PENDING_NATIVE_WINDOWS_OR_GITHUB_ACTIONS",
+    "actual_yorha_mdl_compilation": "PENDING_GITHUB_ACTIONS",
+    "compiled_mdl_binary_readback": "PENDING_ACTUAL_COMPILER_OUTPUT",
+    "hlmv_p2mv_preview": "PENDING",
+    "sven_coop_runtime_test": "PENDING",
+    "github_push_and_actions": "PENDING: must run from authenticated Windows system to publish the complete source tree",
+    "native_windows_compile": "PENDING: GitHub Actions has not run"
+  },
+  "expected_compiler": {
+    "name": "FunnkyHD StudioMDL V2.0",
+    "official_page": "https://gamebanana.com/tools/6552",
+    "selected_for": "Functional $splitmesh support for high-poly GoldSrc/Sven player models; not unlimited",
+    "engine_limits_validated_against_real_output": {
+      "vertices_per_piece": 2048,
+      "normals_per_piece": 2048,
+      "default_triangles_per_piece": 4080,
+      "max_bodyparts": 64,
+      "max_texture_dimension": 1024
+    }
+  },
+  "deployment_script": {
+    "default_repository": "paladini-maker/mdl-workflow",
+    "target_visibility": "read-only detection; existing visibility unchanged",
+    "local_execution_required": true,
+    "visibility": "queried from GitHub; existing setting preserved (repository is public)"
+  },
+  "failure_policy": "Do not claim a compiled model until official compiler functional probe, real model compilation, binary readback, evidence download, and SHA-256 verification all pass."
+}

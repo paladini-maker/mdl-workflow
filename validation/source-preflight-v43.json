@@ -1,0 +1,29 @@
+{
+  "status": "PASS_SOURCE_ASSETS",
+  "project": ".",
+  "qc": "custom_player_windows.qc",
+  "qc_sha256": "716a29d36e2d2db695b197db8a23899780d16ef4f010380a1137be1c0566be6c",
+  "source_mesh_sha256": "b327cf94b840bbfdac3a7041c8c63eeb3473cb4ba34b3fee2cab77bf9e70ad9b",
+  "windows_mesh_sha256": "b3170a7c82a66ef9a2acb89f411e884b46457fe8dc8ad1d67c0cca2beab81c47",
+  "texture": {
+    "path": "/mnt/data/Yorha_Windows_AutoBuild_V43/textures_windows_1024/custom_player.bmp",
+    "width": 1024,
+    "height": 1024,
+    "bits_per_pixel": 8,
+    "palette_entries": 256,
+    "bytes": 1049654,
+    "sha256": "e73c271be4d23a45b186123ed6876083c62202378f8e9183f6e66a9c2a896fdb"
+  },
+  "bones": 90,
+  "triangles": 99998,
+  "vertex_corners": 299994,
+  "sequences": 208,
+  "unique_animation_smd_references": 393,
+  "missing_animation_smd_references": 0,
+  "animation_skeleton_hierarchies_checked": 393,
+  "animation_skeleton_mismatches": 0,
+  "hitboxes": 35,
+  "controllers": 5,
+  "compiler_requirement": "FunnkyHD StudioMDL V2.0 with functional $splitmesh; auto-downloaded from official GameBanana page if cache is absent",
+  "mode": "sources"
+}

@@ -1,0 +1,48 @@
+{
+  "status": "PASS_SOURCE_PREFLIGHT_AND_AUTOMATION_STATIC_CHECKS__NATIVE_WINDOWS_BUILD_PENDING",
+  "generated_at_utc": "2026-10-29T16:56:35.819300+00:00",
+  "checks": {
+    "python_compile": "PASS",
+    "regression_tests": "PASS 13/13",
+    "source_preflight": "PASS_SOURCE_ASSETS",
+    "workflow_yaml": "PASS",
+    "workflow_dependencies": "PASS: source-audit -> windows-build",
+    "PowerShell_delimiters": "PASS static lexical scan",
+    "official_v2_selection": "PASS default and forced-update paths",
+    "portable_7zr_bootstrap": "PASS static code verification and cached SHA-256 validation",
+    "qc_contract": "PASS: $splitmesh before $body; no $resizetexture; pre-indexed 1024 BMP",
+    "full_animation_source_audit": "PASS 393 references; zero missing/mismatched skeletons"
+  },
+  "model_inventory": {
+    "bones": 90,
+    "triangles": 99998,
+    "sequences": 208,
+    "animation_smd_references": 393,
+    "missing_animation_references": 0,
+    "skeleton_mismatches": 0,
+    "hitboxes": 35,
+    "controllers": 5,
+    "texture": "1024x1024 uncompressed 8-bit indexed BMP with 256 colors"
+  },
+  "compiler": {
+    "name": "FunnkyHD StudioMDL V2.0",
+    "official_page": "https://gamebanana.com/tools/6552",
+    "archive": "funnkyhd-studiomdl_f6dee.7z",
+    "max_verts_per_piece": 2048,
+    "max_normals_per_piece": 2048,
+    "max_triangles_per_piece": 4080,
+    "max_bodyparts": 64,
+    "max_sven_texture_px": 1024,
+    "functional_splitmesh_probe": "must execute natively and pass before compiling Yorha"
+  },
+  "native_checks_not_run": [
+    "download official compiler archive",
+    "download/extract official 7zr fallback",
+    "compile 2050-triangle splitmesh probe",
+    "compile Yorha MDL with Windows binary",
+    "compiled MDL readback against real binary",
+    "HLMV/P2MV",
+    "Sven Co-op runtime"
+  ],
+  "result": "Workflow package ready; native Windows compile and runtime are pending; no compiled MDL is claimed."
+}

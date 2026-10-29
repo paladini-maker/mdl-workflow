@@ -1,0 +1,18 @@
+test_compiler_capability_probe_really_exceeds_2048_unique_vertices (__main__.WorkflowSourceTests.test_compiler_capability_probe_really_exceeds_2048_unique_vertices) ... ok
+test_execution_status_does_not_claim_actual_windows_compile (__main__.WorkflowSourceTests.test_execution_status_does_not_claim_actual_windows_compile) ... ok
+test_mdl_parser_accepts_valid_compressed_animation_rle (__main__.WorkflowSourceTests.test_mdl_parser_accepts_valid_compressed_animation_rle) ... ok
+test_mdl_parser_passes_synthetic_multi_bodypart_fixture (__main__.WorkflowSourceTests.test_mdl_parser_passes_synthetic_multi_bodypart_fixture) ... ok
+test_mdl_parser_rejects_single_part_probe (__main__.WorkflowSourceTests.test_mdl_parser_rejects_single_part_probe) ... ok
+test_mdl_parser_rejects_truncated_animation_rle (__main__.WorkflowSourceTests.test_mdl_parser_rejects_truncated_animation_rle) ... ok
+test_mdl_parser_rejects_zero_length_animation_rle_run (__main__.WorkflowSourceTests.test_mdl_parser_rejects_zero_length_animation_rle_run) ... ok
+test_portable_extractor_cache_is_hash_verified (__main__.WorkflowSourceTests.test_portable_extractor_cache_is_hash_verified) ... ok
+test_powershell_workflow_delimiters_are_balanced (__main__.WorkflowSourceTests.test_powershell_workflow_delimiters_are_balanced) ... ok
+test_qc_uses_supported_v2_splitmesh_and_preindexed_texture_without_resize (__main__.WorkflowSourceTests.test_qc_uses_supported_v2_splitmesh_and_preindexed_texture_without_resize) ... ok
+test_real_project_sources_pass_full_preflight (__main__.WorkflowSourceTests.test_real_project_sources_pass_full_preflight) ... ok
+test_unpacker_bootstraps_from_official_7zip_if_no_extractor_is_installed (__main__.WorkflowSourceTests.test_unpacker_bootstraps_from_official_7zip_if_no_extractor_is_installed) ... ok
+test_windows_workflow_defaults_to_official_v2_and_fails_closed (__main__.WorkflowSourceTests.test_windows_workflow_defaults_to_official_v2_and_fails_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.386s
+
+OK
