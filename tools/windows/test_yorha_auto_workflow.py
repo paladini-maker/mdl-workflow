@@ -76,7 +76,7 @@ def build_minimal_test_mdl(triangle_counts: list[int], animation_stream: str = '
     # One indexed texture, 16x16 pixels + 256-color palette.
     texture_index = len(data); data.extend(b'\0'*80)
     skin_index = len(data); data.extend(struct.pack('<h',0)); data.extend(b'\0'*((-len(data)) % 4))
-    pixel_index = len(data); data.extend(bytes(16*16)); data.extend(struct.pack('<H',256)); data.extend(bytes(768))
+    pixel_index = len(data); data.extend(bytes(16*16)); data.extend(bytes(768))
     texture=bytearray(80); texture[:64]=b'test.bmp\0'+b'\0'*(64-len('test.bmp')-1)
     struct.pack_into('<4i',texture,64,0,16,16,pixel_index)
     data[texture_index:texture_index+80]=texture
@@ -189,6 +189,12 @@ class WorkflowSourceTests(unittest.TestCase):
         ps=(SCRIPT.parent/'Invoke-YorhaBuild.ps1').read_text(encoding='utf-8')
         self.assertRegex(ps,r"(?m)^\s*& \$extractor 't' \$ArchivePath '-y' \| Out-Host\s*$")
         self.assertRegex(ps,r"(?m)^\s*& \$extractor 'x' \$ArchivePath \(\"-o\" \+ \$Destination\) '-y' \| Out-Host\s*$")
+    def test_goldsrc_mdl_texture_payload_has_no_palette_count_prefix(self):
+        source=(SCRIPT.parent/'validate_yorha_auto_workflow.py').read_text(encoding='utf-8')
+        self.assertIn("check_range(data,pixels_idx,width*height+768,f'texture image {name}')",source)
+        self.assertNotIn('width*height+2+768',source)
+        self.assertNotIn('pal=u16(data,pixels_idx+width*height)',source)
+        self.assertIn('data.extend(bytes(16*16)); data.extend(bytes(768))',Path(__file__).read_text(encoding='utf-8'))
     def test_portable_extractor_cache_is_hash_verified(self):
         ps=(SCRIPT.parent/'Invoke-YorhaBuild.ps1').read_text(encoding='utf-8')
         self.assertIn("Get-Content -LiteralPath $extractorInfoPath -Raw | ConvertFrom-Json",ps)

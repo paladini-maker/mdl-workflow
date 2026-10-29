@@ -406,10 +406,8 @@ def validate_mdl(path: Path, *, profile: str = 'yorha', source_root: Path | None
         width,height,pixels_idx=struct.unpack_from('<iii',data,rec+68)
         if not (1 <= width <= 1024 and 1 <= height <= 1024):
             raise ValueError(f'texture exceeds Sven Co-op limit 1024: {name} {width}x{height}')
-        check_range(data,pixels_idx,width*height+2+768,f'texture image {name}')
-        pal=u16(data,pixels_idx+width*height)
-        if pal != 256: raise ValueError(f'texture {name} must have 256 palette entries, got {pal}')
-        texture_info.append({'name':name,'width':width,'height':height,'palette_entries':pal,'pixel_offset':pixels_idx})
+        check_range(data,pixels_idx,width*height+768,f'texture image {name}')
+        texture_info.append({'name':name,'width':width,'height':height,'palette_entries':256,'pixel_offset':pixels_idx})
 
     models=[]; triangles_total=0; verts_total=0; norms_total=0; max_verts=0; max_norms=0; model_count=0
     for bi in range(bodyparts):
