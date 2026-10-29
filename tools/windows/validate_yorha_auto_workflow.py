@@ -461,9 +461,9 @@ def validate_mdl(path: Path, *, profile: str = 'yorha', source_root: Path | None
             models.append({'bodypart':bp_name,'model':name,'vertices':nverts,'normals':nnorms,'triangles':model_tri,'meshes':nmesh})
     if profile == 'yorha' and triangles_total != EXPECTED_TRIANGLES:
         raise ValueError(f'compiled triangle count mismatch: expected {EXPECTED_TRIANGLES}, got {triangles_total}')
-    if profile == 'probe' and triangles_total != 2050:
+    if profile in ('probe', 'synthetic_probe') and triangles_total != 2050:
         raise ValueError(f'splitmesh probe expected 2050 triangles, got {triangles_total}')
-    if profile == 'probe' and bodyparts < 2:
+    if profile in ('probe', 'synthetic_probe') and bodyparts < 2:
         raise ValueError('compiler accepted $splitmesh text but did not split the 2050-triangle/over-2048-vertex probe')
     if profile == 'probe' and (bones != 2 or set(bone_names) != {'root', 'unused'} or seqs != 1):
         raise ValueError(f'compiler probe inventory mismatch bones={bones}, names={bone_names}, sequences={seqs}')

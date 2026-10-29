@@ -161,8 +161,9 @@ class WorkflowSourceTests(unittest.TestCase):
             source_bone_names, _ = validator.parse_smd_nodes(ROOT/'mesh/custom_player_highpoly_windows.smd')
             protected_names = re.findall(r'(?im)^\s*\$protected\s+"([^"]+)"\s*$', qc)
             self.assertEqual(protected_names, list(source_bone_names.values()))
-            self.assertLess(max(qc.index(f'$protected "{name}"') for name in protected_names), qc.index('$splitmesh 2048'))
-            self.assertIn('$splitmesh 2048',qc)
+            splitmatch = re.search(r'(?im)^[ \t]*\$splitmesh[ \t]+2048(?:[ \t].*)?$', qc)
+            self.assertIsNotNone(splitmatch, 'missing actual $splitmesh directive')
+            self.assertLess(max(qc.index(f'$protected "{name}"') for name in protected_names), splitmatch.start())
             self.assertNotIn('$body "body" "mesh/custom_player_highpoly_windows"',qc)
 
     def test_compiler_capability_probe_really_exceeds_2048_unique_vertices(self):
@@ -254,7 +255,11 @@ class WorkflowSourceTests(unittest.TestCase):
 
     def test_qc_uses_supported_v2_splitmesh_and_preindexed_texture_without_resize(self):
         qc=(ROOT/'custom_player_windows.qc').read_text(encoding='utf-8-sig')
-        self.assertLess(qc.index('$splitmesh 2048'),qc.index('$body '))
+        splitmatch=re.search(r'(?im)^[ \t]*\$splitmesh[ \t]+2048(?:[ \t].*)?$',qc)
+        bodymatch=re.search(r'(?im)^[ \t]*\$body\b',qc)
+        self.assertIsNotNone(splitmatch, 'missing actual $splitmesh directive')
+        self.assertIsNotNone(bodymatch, 'missing actual $body directive')
+        self.assertLess(splitmatch.start(),bodymatch.start())
         self.assertIn('$cdtexture "./textures_windows_1024/"',qc)
         self.assertNotRegex(qc,r'(?im)^\s*\$resizetexture\b')
         self.assertEqual(len(re.findall(r'(?im)^\s*\$sequence\s+"',qc)),208)
@@ -277,7 +282,7 @@ class WorkflowSourceTests(unittest.TestCase):
         mdl=build_minimal_test_mdl([513,513,512,512])
         with tempfile.TemporaryDirectory() as td:
             path=Path(td)/'synthetic-probe.mdl'; path.write_bytes(mdl)
-            result=validator.validate_mdl(path,profile='probe')
+            result=validator.validate_mdl(path,profile='synthetic_probe')
             self.assertEqual(result['status'],'PASS_MDL_V10_STRUCTURAL_VALIDATION')
             self.assertEqual(result['bodyparts'],4)
             self.assertEqual(result['triangles_total'],2050)
@@ -286,7 +291,7 @@ class WorkflowSourceTests(unittest.TestCase):
         mdl=build_minimal_test_mdl([513,513,512,512], animation_stream='valid')
         with tempfile.TemporaryDirectory() as td:
             path=Path(td)/'valid-animation-rle.mdl'; path.write_bytes(mdl)
-            result=validator.validate_mdl(path,profile='probe')
+            result=validator.validate_mdl(path,profile='synthetic_probe')
             self.assertEqual(result['status'],'PASS_MDL_V10_STRUCTURAL_VALIDATION')
 
     def test_mdl_parser_rejects_truncated_animation_rle(self):
@@ -294,14 +299,14 @@ class WorkflowSourceTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             path=Path(td)/'truncated-animation-rle.mdl'; path.write_bytes(mdl)
             with self.assertRaisesRegex(ValueError,'animation channel offset|out of bounds|RLE'):
-                validator.validate_mdl(path,profile='probe')
+                validator.validate_mdl(path,profile='synthetic_probe')
 
     def test_mdl_parser_rejects_zero_length_animation_rle_run(self):
         mdl=build_minimal_test_mdl([513,513,512,512], animation_stream='bad_counts')
         with tempfile.TemporaryDirectory() as td:
             path=Path(td)/'bad-animation-rle.mdl'; path.write_bytes(mdl)
             with self.assertRaisesRegex(ValueError,'animation RLE counts'):
-                validator.validate_mdl(path,profile='probe')
+                validator.validate_mdl(path,profile='synthetic_probe')
 
 
     def test_github_deploy_script_has_balanced_powershell_delimiters(self):
@@ -357,12 +362,18 @@ class WorkflowSourceTests(unittest.TestCase):
         self.assertIn("'--log-failed'",text)
         self.assertIn('github-actions-failed.log',text)
 
+    def test_compiler_probe_rejects_missing_protected_bone(self):
+        mdl=build_minimal_test_mdl([513,513,512,512])
+        with tempfile.TemporaryDirectory() as td:
+            path=Path(td)/'missing-protected-bone.mdl'; path.write_bytes(mdl)
+            with self.assertRaisesRegex(ValueError,'compiler probe inventory mismatch'):
+                validator.validate_mdl(path,profile='probe')
     def test_mdl_parser_rejects_single_part_probe(self):
         mdl=build_minimal_test_mdl([2050])
         with tempfile.TemporaryDirectory() as td:
             path=Path(td)/'unsplit.mdl'; path.write_bytes(mdl)
             with self.assertRaisesRegex(ValueError,'exceeds GoldSrc piece budget'):
-                validator.validate_mdl(path,profile='probe')
+                validator.validate_mdl(path,profile='synthetic_probe')
 
 if __name__=='__main__':
     unittest.main(verbosity=2)
