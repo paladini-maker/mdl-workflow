@@ -157,13 +157,22 @@ class WorkflowSourceTests(unittest.TestCase):
             self.assertTrue(all(len(ref) <= 60 for ref in body_refs), f"long QC $body path: {max(map(len, body_refs), default=0)}")
             self.assertTrue(all((ROOT / f"{ref}.smd").is_file() for ref in body_refs))
             self.assertEqual(len(re.findall(r'(?im)^\s*\$sequence\s+"',qc)),208)
+            self.assertNotRegex(qc, r'(?im)^\s*\$keepallbones\b')
+            source_bone_names, _ = validator.parse_smd_nodes(ROOT/'mesh/custom_player_highpoly_windows.smd')
+            protected_names = re.findall(r'(?im)^\s*\$protected\s+"([^"]+)"\s*$', qc)
+            self.assertEqual(protected_names, list(source_bone_names.values()))
+            self.assertLess(max(qc.index(f'$protected "{name}"') for name in protected_names), qc.index('$splitmesh 2048'))
             self.assertIn('$splitmesh 2048',qc)
             self.assertNotIn('$body "body" "mesh/custom_player_highpoly_windows"',qc)
 
     def test_compiler_capability_probe_really_exceeds_2048_unique_vertices(self):
         probe_dir=SCRIPT.parent/'compiler_probe'
         qc=(probe_dir/'probe.qc').read_text(encoding='utf-8')
-        self.assertLess(qc.index('$splitmesh 2048'),qc.index('$body'))
+        self.assertIn('$protected "unused"',qc)
+        self.assertLess(qc.index('$protected "unused"'),qc.index('$splitmesh 2048'))
+        probe_names, probe_parents = validator.parse_smd_nodes(probe_dir/'body.smd')
+        self.assertEqual(probe_names, {0:'root',1:'unused'})
+        self.assertEqual(probe_parents, {0:-1,1:0})
         tri,corners=validator.parse_smd_triangles(probe_dir/'body.smd')
         self.assertEqual(tri,2050)
         self.assertEqual(corners,6150)

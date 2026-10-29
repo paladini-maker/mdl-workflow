@@ -77,6 +77,43 @@ def _parse_smd(path: Path) -> tuple[list[str], list[Triangle], int]:
     return prefix, triangles, lines.index("triangles")
 
 
+def _parse_node_names(prefix: list[str], source_path: Path) -> list[str]:
+    """Return every reference-SMD bone name in numeric order for $protected QC lines."""
+    in_nodes = False
+    found_nodes = False
+    names: list[str] = []
+    parents: list[int] = []
+    for raw in prefix:
+        line = raw.strip()
+        if line.lower() == "nodes" and not found_nodes:
+            in_nodes = True
+            found_nodes = True
+            continue
+        if in_nodes and line.lower() == "end":
+            break
+        if not in_nodes or not line:
+            continue
+        match = re.fullmatch(r'(-?\d+)\s+"([^"]+)"\s+(-?\d+)', line)
+        if not match:
+            raise ValueError(f"{source_path}: unsupported SMD node line: {line[:120]}")
+        ident, name, parent = int(match.group(1)), match.group(2), int(match.group(3))
+        if ident != len(names):
+            raise ValueError(f"{source_path}: SMD node IDs must be contiguous from zero; got {ident}")
+        if parent < -1 or parent == ident:
+            raise ValueError(f"{source_path}: invalid parent {parent} for bone {name!r}")
+        if any(ord(ch) < 32 for ch in name) or '"' in name:
+            raise ValueError(f"{source_path}: bone name cannot be represented safely in QC: {name!r}")
+        names.append(name)
+        parents.append(parent)
+    if not found_nodes or not names:
+        raise ValueError(f"{source_path}: missing or empty nodes section")
+    if len(set(names)) != len(names):
+        raise ValueError(f"{source_path}: duplicate SMD bone names")
+    for ident, parent in enumerate(parents):
+        if parent >= len(names) or parent < -1 or parent == ident:
+            raise ValueError(f"{source_path}: invalid parent {parent} for bone ID {ident}")
+    return names
+
 def _partition(triangles: list[Triangle], max_vertices: int, max_normals: int, max_triangles: int):
     if min(max_vertices, max_normals, max_triangles) < 1:
         raise ValueError("all partition limits must be positive")
@@ -131,6 +168,7 @@ def build_sven_compatible_split(
     except ValueError as exc:
         raise ValueError("output directory must be inside the repository root") from exc
     prefix, triangles, _ = _parse_smd(source_smd)
+    bone_names = _parse_node_names(prefix, source_smd)
     parts = _partition(triangles, max_vertices, max_normals, max_triangles)
     if len(parts) > max_parts:
         raise ValueError(
@@ -161,6 +199,19 @@ def build_sven_compatible_split(
         })
 
     qc_text = source_qc.read_text(encoding="utf-8-sig", errors="strict")
+    # FunnkyHD StudioMDL V2.0 supports DoomMusic's $protected, but rejects Sven's
+    # $keepallbones. Generate compatible per-bone protection before any model directives.
+    keep_pattern = re.compile(r'(?im)^[ \t]*\$keepallbones[ \t]*(?:\r?\n|$)')
+    if len(keep_pattern.findall(qc_text)) != 1:
+        raise ValueError("source QC must contain exactly one $keepallbones for build-time conversion")
+    qc_text = keep_pattern.sub("", qc_text, count=1)
+    split_pattern = re.compile(r'(?im)^[ \t]*\$splitmesh\b[^\r\n]*')
+    split_matches = list(split_pattern.finditer(qc_text))
+    if len(split_matches) != 1:
+        raise ValueError(f"source QC must contain exactly one $splitmesh directive, found {len(split_matches)}")
+    protected_block = "\n".join(f'$protected "{name}"' for name in bone_names) + "\n"
+    insert_at = split_matches[0].start()
+    qc_text = qc_text[:insert_at] + protected_block + qc_text[insert_at:]
     body_pattern = re.compile(
         r'(?im)^\s*\$body\s+"body"\s+"mesh/custom_player_highpoly_windows"\s*$'
     )
@@ -174,6 +225,10 @@ def build_sven_compatible_split(
             raise ValueError(f"QC $body source path exceeds 60 characters ({len(body_path)}): {body_path}")
         body_lines.append(f'$body "{item["body_name"]}" "{body_path}"')
     generated_qc = body_pattern.sub("\n".join(body_lines), qc_text, count=1)
+    if "$keepallbones" in generated_qc.lower():
+        raise ValueError("generated QC still contains unsupported $keepallbones")
+    if len(re.findall(r'(?im)^\s*\$protected\s+"', generated_qc)) != len(bone_names):
+        raise ValueError("generated QC did not protect every reference bone")
     if "$splitmesh" not in generated_qc.lower():
         raise ValueError("generated QC unexpectedly lost $splitmesh 2048")
     output_qc.parent.mkdir(parents=True, exist_ok=True)

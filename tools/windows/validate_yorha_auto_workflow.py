@@ -465,8 +465,8 @@ def validate_mdl(path: Path, *, profile: str = 'yorha', source_root: Path | None
         raise ValueError(f'splitmesh probe expected 2050 triangles, got {triangles_total}')
     if profile == 'probe' and bodyparts < 2:
         raise ValueError('compiler accepted $splitmesh text but did not split the 2050-triangle/over-2048-vertex probe')
-    if profile == 'probe' and (bones != 1 or seqs != 1):
-        raise ValueError(f'compiler probe inventory mismatch bones={bones}, sequences={seqs}')
+    if profile == 'probe' and (bones != 2 or set(bone_names) != {'root', 'unused'} or seqs != 1):
+        raise ValueError(f'compiler probe inventory mismatch bones={bones}, names={bone_names}, sequences={seqs}')
     if profile == 'yorha' and (max_verts > 2048 or max_norms > 2048):
         raise ValueError('one or more generated body parts exceed maxverts=2048')
     return {
