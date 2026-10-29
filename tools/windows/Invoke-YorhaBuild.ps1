@@ -1,10 +1,27 @@
-﻿[CmdletBinding()]
+[CmdletBinding()]
 param(
-    [string]$Root = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path,
+    [string]$Root = '',
     [string]$CompilerPath,
     [switch]$UseProvidedCompiler,
     [switch]$ForceCompilerUpdate
 )
+
+# Resolve the repository root after PowerShell has initialized script-path variables.
+# Parameter default expressions can evaluate with an empty $PSScriptRoot in some hosts.
+if ([string]::IsNullOrWhiteSpace($Root)) {
+    $scriptDirectory = $PSScriptRoot
+    if ([string]::IsNullOrWhiteSpace($scriptDirectory)) {
+        $scriptPath = $PSCommandPath
+        if ([string]::IsNullOrWhiteSpace($scriptPath)) {
+            $scriptPath = $MyInvocation.MyCommand.Path
+        }
+        if ([string]::IsNullOrWhiteSpace($scriptPath)) {
+            throw 'No se pudo determinar la ruta de Invoke-YorhaBuild.ps1; pasa -Root explícitamente.'
+        }
+        $scriptDirectory = Split-Path -Parent $scriptPath
+    }
+    $Root = (Resolve-Path -LiteralPath (Join-Path $scriptDirectory '..\..')).Path
+}
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
