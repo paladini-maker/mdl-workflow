@@ -129,7 +129,7 @@ class WorkflowSourceTests(unittest.TestCase):
         self.assertEqual(report['animation_skeleton_mismatches'],0)
         self.assertEqual(report['texture']['width'],1024)
 
-def test_sven_splitter_preserves_all_triangles_and_runtime_limits(self):
+    def test_sven_splitter_preserves_all_triangles_and_runtime_limits(self):
         self.assertTrue(SPLITTER_SCRIPT.is_file())
         with tempfile.TemporaryDirectory(prefix='.yorha-split-regression-', dir=ROOT) as td:
             temp=Path(td)
